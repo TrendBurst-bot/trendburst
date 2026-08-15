@@ -7,11 +7,12 @@
   <title>Weer Vandaag: Actuele Weersverwachting, Regen & Temperatuur</title>
 
   <meta name="description"
-        content="Weer vandaag in Nederland: actuele temperatuur, regen, wind en weersverwachting. Bekijk de verwachting voor vandaag en de komende uren.">
+        content="Weer vandaag in Nederland: actuele informatie over temperatuur, regen, wind en weersverwachting. Bekijk ook het weer morgen en de verwachting per uur.">
 
   <meta name="robots" content="index, follow, max-image-preview:large">
 
-  <link rel="canonical" href="https://trendburst-bot.github.io/trendburst/">
+  <link rel="canonical"
+        href="https://trendburst-bot.github.io/trendburst/">
 
   <style>
     * {
@@ -67,6 +68,7 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 12px;
+      margin-top: 18px;
     }
 
     .weather-item {
@@ -78,7 +80,7 @@
 
     .weather-item strong {
       display: block;
-      font-size: 22px;
+      font-size: 18px;
       margin-top: 5px;
     }
 
@@ -92,6 +94,14 @@
       margin: 20px 0;
       color: #777;
       font-size: 13px;
+    }
+
+    .notice {
+      background: #eef5ff;
+      border-left: 4px solid #0b57d0;
+      padding: 14px;
+      margin: 18px 0;
+      border-radius: 4px;
     }
 
     .cta {
@@ -109,11 +119,25 @@
       background: #0846a8;
     }
 
+    .context-link {
+      color: #0b57d0;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .context-link:hover {
+      text-decoration: underline;
+    }
+
     .links a {
       display: block;
       padding: 9px 0;
       color: #0b57d0;
       text-decoration: none;
+    }
+
+    .links a:hover {
+      text-decoration: underline;
     }
 
     footer {
@@ -124,12 +148,17 @@
     }
 
     @media (max-width: 600px) {
+
       header h1 {
         font-size: 23px;
       }
 
       .weather-grid {
         grid-template-columns: 1fr 1fr;
+      }
+
+      .card {
+        padding: 18px;
       }
     }
   </style>
@@ -138,103 +167,287 @@
 <body>
 
 <header>
+
   <h1>Weer Vandaag</h1>
-  <p>Actuele weersverwachting in Nederland</p>
+
+  <p>
+    Actuele weersverwachting in Nederland
+  </p>
+
 </header>
 
 <main class="container">
 
+  <!-- INTRO -->
+
   <section class="card">
 
     <div class="update">
-      Laatst bijgewerkt: <span id="date"></span>
+      Laatst bijgewerkt:
+      <span id="date"></span>
     </div>
 
     <h2>Het weer vandaag</h2>
 
     <p>
       Wil je weten hoe het weer vandaag wordt?
-      Bekijk de actuele verwachting voor temperatuur, regen en wind
+      Bekijk de actuele informatie over temperatuur, regen en wind
       en houd de weersontwikkelingen gedurende de dag in de gaten.
     </p>
+
+    <p>
+      De weersverwachting kan per regio verschillen.
+      Controleer daarom regelmatig de nieuwste beschikbare informatie,
+      vooral wanneer je buitenactiviteiten plant.
+    </p>
+
+    <div class="notice">
+
+      🌤️ <strong>Actuele verwachting:</strong>
+      Het weer kan gedurende de dag veranderen.
+      Controleer de verwachting opnieuw voordat je vertrekt.
+
+    </div>
 
     <div class="weather-grid">
 
       <div class="weather-item">
-        🌡️ Temperatuur
-        <strong>Bekijk actuele data</strong>
+
+        🌡️
+
+        Temperatuur
+
+        <strong>
+          Actuele verwachting
+        </strong>
+
       </div>
 
       <div class="weather-item">
-        🌧️ Regen
-        <strong>Bekijk verwachting</strong>
+
+        🌧️
+
+        Regen
+
+        <strong>
+          Regenverwachting
+        </strong>
+
       </div>
 
       <div class="weather-item">
-        💨 Wind
-        <strong>Bekijk windkracht</strong>
+
+        💨
+
+        Wind
+
+        <strong>
+          Windverwachting
+        </strong>
+
       </div>
 
       <div class="weather-item">
-        ☀️ Verwachting
-        <strong>Vandaag</strong>
+
+        ☀️
+
+        Weersverwachting
+
+        <strong>
+          Vandaag
+        </strong>
+
       </div>
 
     </div>
 
   </section>
 
+
   <!-- BANNER -->
+
   <div class="ad">
     Advertentie
   </div>
 
+
+  <!-- PER UUR -->
+
   <section class="card">
 
-    <h2>Weer per uur</h2>
+    <h2>Weer vandaag per uur</h2>
 
     <p>
       Het weer kan gedurende de dag snel veranderen.
-      Controleer daarom regelmatig de verwachting voor de komende uren,
-      vooral wanneer je buitenactiviteiten plant.
+      Daarom kan een verwachting per uur handig zijn om te zien
+      wanneer regen, wind of hogere temperaturen worden verwacht.
     </p>
 
-    <a class="cta" href="#verwachting">
-      Bekijk de weersverwachting
+    <p>
+      Vooral wanneer je een activiteit buiten plant, is het verstandig
+      om de verwachting voor de komende uren regelmatig te controleren.
+    </p>
+
+    <a class="cta" href="buienradar.html">
+      🌧️ Bekijk Buienradar vandaag
     </a>
 
   </section>
 
-  <section class="card" id="verwachting">
+
+  <!-- REGEN -->
+
+  <section class="card">
+
+    <h2>Gaat het vandaag regenen?</h2>
+
+    <p>
+      Regenbuien kunnen lokaal verschillen.
+      In sommige delen van Nederland kan het regenen terwijl het
+      enkele kilometers verder droog blijft.
+    </p>
+
+    <p>
+      Bekijk daarom onze pagina over
+      <a class="context-link" href="regen.html">
+        regen vandaag
+      </a>
+      voor meer informatie over de regenverwachting.
+    </p>
+
+    <a class="cta" href="regen.html">
+      ☔ Regen vandaag bekijken
+    </a>
+
+  </section>
+
+
+  <!-- MORGEN -->
+
+  <section class="card">
 
     <h2>Weer morgen</h2>
 
     <p>
-      Ook morgen kan het weer verschillen per regio.
+      Ook het weer morgen kan per regio verschillen.
       Temperatuur, wind en neerslag kunnen gedurende de dag veranderen.
-      Bekijk daarom de nieuwste verwachting voordat je plannen maakt.
+      Controleer daarom de nieuwste verwachting voordat je plannen maakt.
+    </p>
+
+    <p>
+      Voor regen in de komende uren kun je ook
+      <a class="context-link" href="buienradar.html">
+        Buienradar vandaag
+      </a>
+      bekijken.
     </p>
 
   </section>
 
+
+  <!-- ZOMER -->
+
+  <section class="card">
+
+    <h2>Zomerweer en warme dagen</h2>
+
+    <p>
+      Tijdens de zomer kunnen temperaturen snel oplopen.
+      Ook kunnen warme dagen worden afgewisseld met regen- en onweersbuien.
+    </p>
+
+    <p>
+      Bekijk onze pagina over
+      <a class="context-link" href="zomer.html">
+        zomerweer
+      </a>
+      voor meer informatie.
+    </p>
+
+  </section>
+
+
+  <!-- ANDERE TRENDS -->
+
+  <section class="card">
+
+    <h2>Andere actuele trends</h2>
+
+    <p>
+      Naast het weer volgen we ook andere onderwerpen die momenteel
+      veel aandacht krijgen.
+    </p>
+
+    <p>
+
+      Bekijk bijvoorbeeld
+      <a class="context-link" href="aardbeving-indonesie.html">
+        Aardbeving Indonesië
+      </a>
+
+      of
+
+      <a class="context-link" href="aardbeving-spanje.html">
+        Aardbeving Spanje
+      </a>.
+
+    </p>
+
+  </section>
+
+
+  <!-- INTERNAL LINKING -->
+
   <section class="card links">
 
-    <h2>Meer over het weer</h2>
+    <h2>🔥 Meer actuele trends</h2>
 
-    <a href="#">🌧️ Regen vandaag</a>
-    <a href="#">💨 Wind vandaag</a>
-    <a href="#">🌡️ Temperatuur vandaag</a>
-    <a href="#">⏰ Weer morgen per uur</a>
+    <a href="index.html">
+      🌤️ Weer vandaag
+    </a>
+
+    <a href="buienradar.html">
+      🌧️ Buienradar vandaag
+    </a>
+
+    <a href="regen.html">
+      ☔ Regen vandaag
+    </a>
+
+    <a href="zomer.html">
+      ☀️ Zomerweer
+    </a>
+
+    <a href="aardbeving-indonesie.html">
+      🌍 Aardbeving Indonesië
+    </a>
+
+    <a href="aardbeving-spanje.html">
+      🇪🇸 Aardbeving Spanje
+    </a>
+
+    <a href="landgraaf.html">
+      📰 Landgraaf vandaag
+    </a>
+
+    <a href="zwolle.html">
+      📍 Zwolle vandaag
+    </a>
 
   </section>
 
 </main>
 
+
 <footer>
+
   © 2026 TrendBurst · Actuele informatie over trends en weer
+
 </footer>
 
+
 <script>
+
   const now = new Date();
 
   document.getElementById("date").textContent =
@@ -242,6 +455,7 @@
       dateStyle: "long",
       timeStyle: "short"
     });
+
 </script>
 
 </body>
