@@ -7,122 +7,154 @@
 <title>Landgraaf Vandaag: Politie Zoekt Drie Verdachten na Woningoverval</title>
 
 <meta name="description"
-content="Landgraaf vandaag: politie zoekt drie verdachten na een woningoverval. Lees de nieuwste beschikbare informatie over de zaak en het politieonderzoek.">
+content="Landgraaf vandaag: politie zoekt drie verdachten na een woningoverval. Bekijk de nieuwste beschikbare informatie over de zaak en het lopende politieonderzoek.">
 
 <meta name="robots" content="index, follow, max-image-preview:large">
 
 <style>
-*{box-sizing:border-box}
-
-body{
-margin:0;
-font-family:Arial,Helvetica,sans-serif;
-background:#f5f6f8;
-color:#222;
-line-height:1.65;
+* {
+  box-sizing: border-box;
 }
 
-header{
-background:#172b4d;
-color:white;
-padding:28px 15px;
-text-align:center;
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5f6f8;
+  color: #222;
+  line-height: 1.65;
 }
 
-header h1{
-margin:0;
-font-size:28px;
+header {
+  background: #172b4d;
+  color: white;
+  padding: 28px 15px;
+  text-align: center;
 }
 
-header p{
-margin:8px 0 0;
+header h1 {
+  margin: 0;
+  font-size: 28px;
 }
 
-.container{
-max-width:850px;
-margin:20px auto;
-padding:0 15px;
+header p {
+  margin: 8px 0 0;
+  opacity: .95;
 }
 
-.card{
-background:white;
-padding:22px;
-margin-bottom:18px;
-border-radius:12px;
-box-shadow:0 2px 9px rgba(0,0,0,.07);
+.container {
+  max-width: 850px;
+  margin: 20px auto;
+  padding: 0 15px;
 }
 
-.date{
-font-size:13px;
-color:#777;
+.card {
+  background: white;
+  padding: 22px;
+  margin-bottom: 18px;
+  border-radius: 12px;
+  box-shadow: 0 2px 9px rgba(0,0,0,.07);
 }
 
-.alert{
-background:#fff3f3;
-border-left:4px solid #c62828;
-padding:15px;
-margin:18px 0;
+.date {
+  font-size: 13px;
+  color: #777;
 }
 
-.info-grid{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:12px;
+.alert {
+  background: #fff3f3;
+  border-left: 4px solid #c62828;
+  padding: 15px;
+  margin: 18px 0;
 }
 
-.info{
-background:#f4f6f8;
-padding:16px;
-border-radius:9px;
-text-align:center;
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-top: 18px;
 }
 
-.info span{
-display:block;
-font-size:27px;
-margin-bottom:5px;
+.info {
+  background: #f4f6f8;
+  padding: 16px;
+  border-radius: 9px;
+  text-align: center;
 }
 
-.ad{
-min-height:90px;
-display:flex;
-align-items:center;
-justify-content:center;
-background:#fafafa;
-border:1px dashed #ccc;
-margin:20px 0;
-color:#777;
-font-size:13px;
+.info span {
+  display: block;
+  font-size: 27px;
+  margin-bottom: 5px;
 }
 
-.btn{
-display:inline-block;
-background:#172b4d;
-color:white;
-padding:12px 20px;
-border-radius:7px;
-text-decoration:none;
-font-weight:bold;
-margin-top:10px;
+.ad {
+  min-height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fafafa;
+  border: 1px dashed #ccc;
+  margin: 20px 0;
+  color: #777;
+  font-size: 13px;
 }
 
-.links a{
-display:block;
-padding:8px 0;
-color:#1769aa;
-text-decoration:none;
+.btn {
+  display: inline-block;
+  background: #172b4d;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 7px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 10px;
 }
 
-footer{
-text-align:center;
-padding:25px 15px;
-color:#777;
-font-size:13px;
+.btn:hover {
+  background: #0d1d35;
 }
 
-@media(max-width:600px){
-header h1{font-size:23px}
-.info-grid{grid-template-columns:1fr 1fr}
+.context-link {
+  color: #1769aa;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.context-link:hover {
+  text-decoration: underline;
+}
+
+.links a {
+  display: block;
+  padding: 8px 0;
+  color: #1769aa;
+  text-decoration: none;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  text-align: center;
+  padding: 25px 15px;
+  color: #777;
+  font-size: 13px;
+}
+
+@media(max-width:600px) {
+
+  header h1 {
+    font-size: 23px;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .card {
+    padding: 18px;
+  }
 }
 </style>
 </head>
@@ -131,158 +163,232 @@ header h1{font-size:23px}
 
 <header>
 
-<h1>Landgraaf Vandaag</h1>
+  <h1>Landgraaf Vandaag</h1>
 
-<p>Laatste informatie over de woningoverval</p>
+  <p>
+    Laatste beschikbare informatie over de woningoverval
+  </p>
 
 </header>
 
+
 <main class="container">
+
+
+<!-- INTRO -->
 
 <section class="card">
 
-<p class="date">
-Laatste update: 15 augustus 2026
-</p>
+  <p class="date">
+    Laatste update: 15 augustus 2026
+  </p>
 
-<h2>Politie zoekt drie verdachten in Landgraaf</h2>
+  <h2>Politie zoekt drie verdachten in Landgraaf</h2>
 
-<p>
-De politie is in Landgraaf een onderzoek gestart na een woningoverval
-die vrijdagavond 14 augustus plaatsvond.
-</p>
+  <p>
+    De politie onderzoekt een woningoverval in Landgraaf die
+    vrijdagavond 14 augustus zou hebben plaatsgevonden.
+  </p>
 
-<p>
-Volgens de politie waren tijdens de overval twee personen in de woning
-aanwezig. Zij werden bedreigd door drie verdachten.
-</p>
+  <p>
+    Volgens de beschikbare informatie waren tijdens de overval
+    twee personen in de woning aanwezig. De politie onderzoekt
+    de omstandigheden van de zaak en is op zoek naar drie verdachten.
+  </p>
 
-<div class="alert">
+  <div class="alert">
 
-<strong>Belangrijk:</strong><br>
+    <strong>⚠️ Belangrijk:</strong><br>
 
-Het onderzoek loopt nog. Niet alle details over de zaak zijn op dit
-moment bekend.
+    Het onderzoek loopt nog. Details kunnen veranderen wanneer
+    de politie nieuwe informatie bekendmaakt.
 
-</div>
+  </div>
 
-<div class="info-grid">
 
-<div class="info">
-<span>👮</span>
-<strong>Politieonderzoek</strong>
-<p>Loopt nog</p>
-</div>
+  <div class="info-grid">
 
-<div class="info">
-<span>👥</span>
-<strong>Verdachten</strong>
-<p>Drie personen gezocht</p>
-</div>
+    <div class="info">
+      <span>👮</span>
+      <strong>Politieonderzoek</strong>
+      <p>Lopend</p>
+    </div>
 
-<div class="info">
-<span>🚗</span>
-<strong>Auto</strong>
-<p>Teruggevonden</p>
-</div>
+    <div class="info">
+      <span>👥</span>
+      <strong>Verdachten</strong>
+      <p>Drie personen gezocht</p>
+    </div>
 
-<div class="info">
-<span>📹</span>
-<strong>Camerabeelden</strong>
-<p>Worden onderzocht</p>
-</div>
+    <div class="info">
+      <span>🚗</span>
+      <strong>Voertuig</strong>
+      <p>Teruggevonden</p>
+    </div>
 
-</div>
+    <div class="info">
+      <span>📹</span>
+      <strong>Camerabeelden</strong>
+      <p>Onderzocht</p>
+    </div>
+
+  </div>
 
 </section>
+
 
 <!-- BANNER -->
 
 <div class="ad">
-Advertentie
+  Advertentie
 </div>
 
-<section class="card">
 
-<h2>Wat is er gebeurd?</h2>
-
-<p>
-De woningoverval vond plaats aan de H. Roland Holststraat in Landgraaf.
-De politie meldt dat drie verdachten de aanwezige personen bedreigden.
-</p>
-
-<p>
-Na de overval vertrokken de verdachten in een bestelbus.
-De auto die eerder tijdens de woningoverval was gestolen,
-werd later die avond rond 22:45 uur door de politie in Landgraaf
-aangetroffen.
-</p>
-
-<p>
-Wat er precies is buitgemaakt, is volgens de politie nog niet bekend.
-Ook wordt onderzocht wat er precies is gebeurd en wie verantwoordelijk
-is voor de overval.
-</p>
-
-</section>
+<!-- WAT IS ER GEBEURD -->
 
 <section class="card">
 
-<h2>Politie zoekt informatie</h2>
+  <h2>Wat is er gebeurd in Landgraaf?</h2>
 
-<p>
-De politie onderzoekt onder meer camerabeelden.
-Mensen die iets hebben gezien of over relevante camerabeelden beschikken,
-kunnen contact opnemen met de politie.
-</p>
+  <p>
+    De woningoverval vond volgens de beschikbare informatie plaats
+    aan de H. Roland Holststraat in Landgraaf.
+  </p>
 
-<p>
-Voor actuele informatie over de zaak is het verstandig om officiële
-politieberichten te volgen.
-</p>
+  <p>
+    De politie onderzoekt de omstandigheden rond de overval en
+    probeert vast te stellen wat er precies is gebeurd.
+  </p>
 
-<a class="btn"
-href="index.html">
-Meer actuele trends
-</a>
+  <p>
+    Volgens de beschikbare informatie vertrokken de verdachten
+    na de overval met een bestelbus. Een voertuig dat in verband
+    werd gebracht met de zaak werd later door de politie aangetroffen.
+  </p>
+
+  <p>
+    Wat er precies is buitgemaakt en welke rol de verschillende
+    betrokkenen hebben gespeeld, wordt nog onderzocht.
+  </p>
 
 </section>
+
+
+<!-- POLITIE -->
+
+<section class="card">
+
+  <h2>Politieonderzoek gaat verder</h2>
+
+  <p>
+    De politie onderzoekt onder meer beschikbare camerabeelden
+    en andere informatie die kan helpen bij het onderzoek.
+  </p>
+
+  <p>
+    Mensen die relevante informatie hebben, wordt geadviseerd
+    contact op te nemen met de politie en officiële meldingen
+    te volgen.
+  </p>
+
+  <p>
+    Nieuwe informatie over de zaak kan worden toegevoegd zodra
+    deze officieel beschikbaar is.
+  </p>
+
+</section>
+
+
+<!-- BANNER 2 -->
+
+<div class="ad">
+  Advertentie
+</div>
+
+
+<!-- TREND LINKING -->
+
+<section class="card">
+
+  <h2>Andere actuele trends</h2>
+
+  <p>
+    Naast lokaal nieuws volgen we bij TrendBurst ook andere
+    onderwerpen die momenteel veel aandacht krijgen.
+  </p>
+
+  <p>
+
+    Bekijk bijvoorbeeld het
+    <a class="context-link" href="index.html">
+      weer vandaag
+    </a>,
+
+    de actuele
+    <a class="context-link" href="buienradar.html">
+      Buienradar
+    </a>
+
+    of de
+    <a class="context-link" href="regen.html">
+      regenverwachting
+    </a>.
+
+  </p>
+
+</section>
+
+
+<!-- ALL INTERNAL LINKS -->
 
 <section class="card links">
 
-<h2>Meer actuele onderwerpen</h2>
+  <h2>🔥 Meer actuele onderwerpen</h2>
 
-<a href="index.html">
-🌤️ Weer vandaag
-</a>
+  <a href="index.html">
+    🌤️ Weer vandaag
+  </a>
 
-<a href="buienradar.html">
-🌧️ Buienradar
-</a>
+  <a href="buienradar.html">
+    🌧️ Buienradar vandaag
+  </a>
 
-<a href="regen.html">
-☔ Regen vandaag
-</a>
+  <a href="regen.html">
+    ☔ Regen vandaag
+  </a>
 
-<a href="zomer.html">
-☀️ Zomerweer
-</a>
+  <a href="zomer.html">
+    ☀️ Zomerweer
+  </a>
 
-<a href="aardbeving-indonesie.html">
-🌍 Aardbeving Indonesië
-</a>
+  <a href="aardbeving-indonesie.html">
+    🌍 Aardbeving Indonesië
+  </a>
 
-<a href="aardbeving-spanje.html">
-🌍 Aardbeving Spanje
-</a>
+  <a href="aardbeving-spanje.html">
+    🇪🇸 Aardbeving Spanje
+  </a>
+
+  <a href="landgraaf.html">
+    📰 Landgraaf vandaag
+  </a>
+
+  <a href="zwolle.html">
+    📍 Zwolle vandaag
+  </a>
 
 </section>
 
+
 </main>
 
+
 <footer>
-© 2026 TrendBurst · Actuele trends en nieuws
+
+  © 2026 TrendBurst · Actuele trends en nieuws
+
 </footer>
+
 
 </body>
 </html>
