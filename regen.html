@@ -107,7 +107,7 @@ margin-bottom:5px;
 width:100%;
 max-width:100%;
 min-height:90px;
-height:auto;
+height:90px;
 display:flex;
 align-items:center;
 justify-content:center;
@@ -120,7 +120,6 @@ overflow:hidden;
 position:relative;
 }
 
-/* الإعلان الأصلي 728x90 */
 .ad-box iframe{
 display:block;
 width:728px !important;
@@ -129,7 +128,6 @@ height:90px !important;
 border:0 !important;
 }
 
-/* أي عنصر يتم إنشاؤه بواسطة شبكة الإعلان */
 .ad-box > div,
 .ad-box > iframe,
 .ad-box > ins{
@@ -227,12 +225,6 @@ padding:14px 8px;
 font-size:25px;
 }
 
-/*
-  جعل الإعلان مناسباً لشاشات الهاتف.
-  الإعلان الأصلي 728px يتم تقليصه بصرياً
-  داخل المساحة المتاحة.
-*/
-
 .ad-box{
 width:100%;
 min-height:90px;
@@ -248,7 +240,9 @@ height:90px !important;
 
 }
 
-/* شاشات صغيرة جداً */
+/* =========================
+   SMALL MOBILE
+========================= */
 
 @media(max-width:360px){
 
@@ -294,7 +288,9 @@ margin-right:0;
 
 <main class="container">
 
-<!-- INTRO -->
+<!-- =========================
+     INTRO
+========================= -->
 
 <section class="card">
 
@@ -370,7 +366,7 @@ Controleer daarom regelmatig de nieuwste beschikbare weerinformatie.
 
 
 <!-- =========================
-     BANNER
+     BANNER 1
 ========================= -->
 
 <div class="ad-box">
@@ -390,7 +386,9 @@ atOptions = {
 </div>
 
 
-<!-- REGENVERWACHTING -->
+<!-- =========================
+     REGENVERWACHTING
+========================= -->
 
 <section class="card">
 
@@ -408,14 +406,20 @@ Let naast neerslag ook op wind en temperatuur. Deze factoren
 kunnen samen bepalen hoe het weer buiten aanvoelt.
 </p>
 
-<a href="#weerinfo" class="btn">
+<a
+href="https://trendburst-bot.github.io/trendburst/#weerinfo"
+class="btn">
+
 Bekijk meer weerinformatie
+
 </a>
 
 </section>
 
 
-<!-- MEER INFORMATIE -->
+<!-- =========================
+     MEER INFORMATIE
+========================= -->
 
 <section class="card" id="weerinfo">
 
@@ -464,46 +468,46 @@ Bekijk actuele informatie
 
 <!-- =========================
      INTERNAL LINKS
-     ZONDER .HTML
+     VOLLEDIGE URL'S
 ========================= -->
 
 <section class="card links">
 
 <h2>Meer op TrendBurst</h2>
 
-<a href="/">
+<a href="https://trendburst-bot.github.io/trendburst/">
 🌤️ Weer Vandaag
 </a>
 
-<a href="/buienradar">
+<a href="https://trendburst-bot.github.io/trendburst/buienradar">
 🌧️ Buienradar Vandaag
 </a>
 
-<a href="/regen">
+<a href="https://trendburst-bot.github.io/trendburst/regen">
 ☔ Regen Vandaag
 </a>
 
-<a href="/zomer">
+<a href="https://trendburst-bot.github.io/trendburst/zomer">
 ☀️ Zomerweer
 </a>
 
-<a href="/landgraaf">
+<a href="https://trendburst-bot.github.io/trendburst/landgraaf">
 📰 Landgraaf Vandaag
 </a>
 
-<a href="/aardbeving-indonesie">
+<a href="https://trendburst-bot.github.io/trendburst/aardbeving-indonesie">
 🌍 Aardbeving Indonesië
 </a>
 
-<a href="/aardbeving-spanje">
+<a href="https://trendburst-bot.github.io/trendburst/aardbeving-spanje">
 🌍 Aardbeving Spanje
 </a>
 
-<a href="/wind">
+<a href="https://trendburst-bot.github.io/trendburst/wind">
 💨 Wind Vandaag
 </a>
 
-<a href="/zwolle">
+<a href="https://trendburst-bot.github.io/trendburst/zwolle">
 🎡 Zwolle Vandaag
 </a>
 
