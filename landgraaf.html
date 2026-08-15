@@ -16,12 +16,17 @@ content="Landgraaf vandaag: politie zoekt drie verdachten na een woningoverval. 
   box-sizing: border-box;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   background: #f5f6f8;
   color: #222;
   line-height: 1.65;
+  overflow-x: hidden;
 }
 
 header {
@@ -87,17 +92,43 @@ header p {
   margin-bottom: 5px;
 }
 
+
+/* =========================
+   RESPONSIVE BANNER
+   ========================= */
+
 .ad {
+  width: 100%;
   min-height: 90px;
+  margin: 20px 0;
+  padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   background: #fafafa;
   border: 1px dashed #ccc;
-  margin: 20px 0;
-  color: #777;
-  font-size: 13px;
+  overflow: hidden;
+  position: relative;
 }
+
+.ad-inner {
+  width: 100%;
+  max-width: 728px;
+  min-height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.ad-inner iframe {
+  max-width: 100% !important;
+}
+
+
+/* =========================
+   BUTTON
+   ========================= */
 
 .btn {
   display: inline-block;
@@ -113,6 +144,11 @@ header p {
 .btn:hover {
   background: #0d1d35;
 }
+
+
+/* =========================
+   LINKS
+   ========================= */
 
 .context-link {
   color: #1769aa;
@@ -135,12 +171,22 @@ header p {
   text-decoration: underline;
 }
 
+
+/* =========================
+   FOOTER
+   ========================= */
+
 footer {
   text-align: center;
   padding: 25px 15px;
   color: #777;
   font-size: 13px;
 }
+
+
+/* =========================
+   MOBILE
+   ========================= */
 
 @media(max-width:600px) {
 
@@ -155,6 +201,20 @@ footer {
   .card {
     padding: 18px;
   }
+
+  .ad {
+    min-height: 90px;
+    margin: 18px 0;
+    border-left: 0;
+    border-right: 0;
+  }
+
+  .ad-inner {
+    width: 100%;
+    max-width: 100%;
+    min-height: 90px;
+  }
+
 }
 </style>
 </head>
@@ -237,10 +297,26 @@ footer {
 </section>
 
 
-<!-- BANNER -->
+<!-- BANNER 1 -->
 
 <div class="ad">
-  Advertentie
+
+  <div class="ad-inner">
+
+    <script>
+      atOptions = {
+        'key' : '77a41a8b52696cf0b6dd4d507cc270d0',
+        'format' : 'iframe',
+        'height' : 90,
+        'width' : 728,
+        'params' : {}
+      };
+    </script>
+
+    <script src="https://www.highperformanceformat.com/77a41a8b52696cf0b6dd4d507cc270d0/invoke.js"></script>
+
+  </div>
+
 </div>
 
 
@@ -302,7 +378,23 @@ footer {
 <!-- BANNER 2 -->
 
 <div class="ad">
-  Advertentie
+
+  <div class="ad-inner">
+
+    <script>
+      atOptions = {
+        'key' : '77a41a8b52696cf0b6dd4d507cc270d0',
+        'format' : 'iframe',
+        'height' : 90,
+        'width' : 728,
+        'params' : {}
+      };
+    </script>
+
+    <script src="https://www.highperformanceformat.com/77a41a8b52696cf0b6dd4d507cc270d0/invoke.js"></script>
+
+  </div>
+
 </div>
 
 
@@ -320,17 +412,17 @@ footer {
   <p>
 
     Bekijk bijvoorbeeld het
-    <a class="context-link" href="index.html">
+    <a class="context-link" href="/">
       weer vandaag
     </a>,
 
     de actuele
-    <a class="context-link" href="buienradar.html">
+    <a class="context-link" href="buienradar">
       Buienradar
     </a>
 
     of de
-    <a class="context-link" href="regen.html">
+    <a class="context-link" href="regen">
       regenverwachting
     </a>.
 
@@ -345,35 +437,35 @@ footer {
 
   <h2>🔥 Meer actuele onderwerpen</h2>
 
-  <a href="index.html">
+  <a href="/">
     🌤️ Weer vandaag
   </a>
 
-  <a href="buienradar.html">
+  <a href="buienradar">
     🌧️ Buienradar vandaag
   </a>
 
-  <a href="regen.html">
+  <a href="regen">
     ☔ Regen vandaag
   </a>
 
-  <a href="zomer.html">
+  <a href="zomer">
     ☀️ Zomerweer
   </a>
 
-  <a href="aardbeving-indonesie.html">
+  <a href="aardbeving-indonesie">
     🌍 Aardbeving Indonesië
   </a>
 
-  <a href="aardbeving-spanje.html">
+  <a href="aardbeving-spanje">
     🇪🇸 Aardbeving Spanje
   </a>
 
-  <a href="landgraaf.html">
+  <a href="landgraaf">
     📰 Landgraaf vandaag
   </a>
 
-  <a href="zwolle.html">
+  <a href="zwolle">
     📍 Zwolle vandaag
   </a>
 
