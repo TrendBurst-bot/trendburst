@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -15,51 +16,63 @@ content="Zwolle vandaag: het laatste nieuws, de Zomerkermis, evenementen en wat 
 href="https://trendburst-bot.github.io/trendburst/zwolle">
 
 <style>
+
 *{
 box-sizing:border-box;
 }
 
-html{
+html,
+body{
+margin:0;
+padding:0;
+width:100%;
 overflow-x:hidden;
 }
 
 body{
-margin:0;
 font-family:Arial,Helvetica,sans-serif;
 background:#f5f7fa;
 color:#222;
 line-height:1.65;
-overflow-x:hidden;
 }
 
 header{
 background:#1769aa;
-color:white;
-padding:28px 15px;
+color:#fff;
+padding:30px 15px;
 text-align:center;
 }
 
 header h1{
 margin:0;
-font-size:28px;
+font-size:30px;
+line-height:1.3;
 }
 
 header p{
-margin:8px 0 0;
+margin:9px 0 0;
+font-size:16px;
 }
 
 .container{
+width:100%;
 max-width:850px;
 margin:20px auto;
 padding:0 15px;
 }
 
 .card{
-background:white;
+background:#fff;
 padding:22px;
 margin-bottom:18px;
 border-radius:12px;
 box-shadow:0 2px 9px rgba(0,0,0,.07);
+}
+
+.card h2{
+margin-top:0;
+color:#1769aa;
+line-height:1.4;
 }
 
 .update{
@@ -73,6 +86,11 @@ background:#eef7ff;
 border-left:4px solid #1769aa;
 padding:15px;
 margin:18px 0;
+border-radius:6px;
+}
+
+.highlight p{
+margin-bottom:0;
 }
 
 .info-grid{
@@ -95,9 +113,24 @@ font-size:28px;
 margin-bottom:5px;
 }
 
-/* RESPONSIVE BANNER */
+.info strong{
+display:block;
+}
+
+.info p{
+margin:6px 0 0;
+font-size:14px;
+color:#666;
+}
+
+
+/* =========================
+   RESPONSIVE BANNER
+========================= */
+
 .ad{
 width:100%;
+height:90px;
 min-height:90px;
 display:flex;
 align-items:center;
@@ -106,41 +139,57 @@ background:#fafafa;
 border:1px dashed #ccc;
 margin:20px 0;
 padding:0;
-color:#777;
-font-size:13px;
 overflow:hidden;
+position:relative;
 }
 
 .ad iframe{
 display:block;
-width:728px;
-height:90px;
-max-width:100%;
-border:0;
+width:728px !important;
+max-width:100% !important;
+height:90px !important;
+border:0 !important;
 }
 
-/* SMART LINK BUTTON */
+.ad > div,
+.ad > iframe,
+.ad > ins{
+max-width:100% !important;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
 .btn{
 display:inline-block;
 background:#1769aa;
-color:white;
+color:#fff;
 padding:12px 20px;
 border-radius:7px;
 text-decoration:none;
 font-weight:bold;
 margin-top:10px;
+margin-right:5px;
 }
 
 .btn:hover{
 background:#0d4f80;
 }
 
+
+/* =========================
+   INTERNAL LINKS
+========================= */
+
 .links a{
 display:block;
-padding:9px 0;
+padding:10px 0;
 color:#1769aa;
 text-decoration:none;
 border-bottom:1px solid #eee;
+font-weight:500;
 }
 
 .links a:last-child{
@@ -151,6 +200,11 @@ border-bottom:none;
 text-decoration:underline;
 }
 
+
+/* =========================
+   FOOTER
+========================= */
+
 footer{
 text-align:center;
 padding:25px 15px;
@@ -158,38 +212,83 @@ color:#777;
 font-size:13px;
 }
 
+
+/* =========================
+   MOBILE
+========================= */
+
 @media(max-width:600px){
+
+header{
+padding:24px 12px;
+}
 
 header h1{
 font-size:23px;
 }
 
-.info-grid{
-grid-template-columns:1fr 1fr;
+header p{
+font-size:14px;
+}
+
+.container{
+padding:0 12px;
+margin-top:15px;
 }
 
 .card{
 padding:18px;
+border-radius:10px;
 }
 
-/* تصغير البنر تلقائياً داخل شاشة الجوال */
+.info-grid{
+grid-template-columns:1fr 1fr;
+gap:10px;
+}
+
+.info{
+padding:14px 8px;
+}
+
+.info span{
+font-size:25px;
+}
+
+.info strong{
+font-size:14px;
+}
+
+.info p{
+font-size:12px;
+}
+
+
+/* إعلان الهاتف */
+
 .ad{
-min-height:60px;
+width:100%;
+height:90px;
+min-height:90px;
 margin:18px 0;
 }
 
 .ad iframe{
-width:100%;
-height:auto;
-min-height:60px;
-aspect-ratio:728 / 90;
+width:100% !important;
+max-width:100% !important;
+height:90px !important;
 }
 
 .btn{
 max-width:100%;
+margin-right:3px;
 }
 
 }
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
 
 @media(max-width:380px){
 
@@ -202,7 +301,11 @@ padding:16px;
 }
 
 .info{
-padding:12px 8px;
+padding:12px 7px;
+}
+
+.info span{
+font-size:23px;
 }
 
 .ad{
@@ -210,20 +313,31 @@ margin:15px 0;
 }
 
 }
+
 </style>
+
 </head>
 
 <body>
+
 
 <header>
 
 <h1>Zwolle Vandaag</h1>
 
-<p>Laatste nieuws, evenementen en wat er te doen is</p>
+<p>
+Laatste nieuws, evenementen en wat er te doen is
+</p>
 
 </header>
 
+
 <main class="container">
+
+
+<!-- =========================
+     INTRO
+========================= -->
 
 <section class="card">
 
@@ -234,6 +348,7 @@ margin:15px 0;
 
 </div>
 
+
 <h2>Wat gebeurt er vandaag in Zwolle?</h2>
 
 <p>
@@ -241,6 +356,7 @@ In Zwolle zijn verschillende activiteiten en evenementen.
 Een van de onderwerpen die momenteel de aandacht trekt,
 is de Zomerkermis in Park de Wezenlanden.
 </p>
+
 
 <div class="highlight">
 
@@ -254,55 +370,83 @@ genieten van activiteiten voor jong en oud.
 
 </div>
 
+
 <div class="info-grid">
 
+
 <div class="info">
+
 <span>🎡</span>
+
 <strong>Zomerkermis</strong>
+
 <p>Actueel evenement</p>
+
 </div>
 
+
 <div class="info">
+
 <span>📍</span>
+
 <strong>Locatie</strong>
+
 <p>Park de Wezenlanden</p>
+
 </div>
 
+
 <div class="info">
+
 <span>🎭</span>
+
 <strong>Evenementen</strong>
+
 <p>Activiteiten in Zwolle</p>
+
 </div>
 
+
 <div class="info">
+
 <span>☀️</span>
+
 <strong>Zomer</strong>
+
 <p>Buitenactiviteiten</p>
+
 </div>
+
 
 </div>
 
 </section>
 
 
-<!-- RESPONSIVE BANNER -->
+<!-- =========================
+     BANNER
+========================= -->
 
 <div class="ad">
 
 <script>
-  atOptions = {
-    'key' : '77a41a8b52696cf0b6dd4d507cc270d0',
-    'format' : 'iframe',
-    'height' : 90,
-    'width' : 728,
-    'params' : {}
-  };
+atOptions = {
+'key' : '77a41a8b52696cf0b6dd4d507cc270d0',
+'format' : 'iframe',
+'height' : 90,
+'width' : 728,
+'params' : {}
+};
 </script>
 
 <script src="https://www.highperformanceformat.com/77a41a8b52696cf0b6dd4d507cc270d0/invoke.js"></script>
 
 </div>
 
+
+<!-- =========================
+     ZOMERKERMIS
+========================= -->
 
 <section class="card">
 
@@ -324,6 +468,10 @@ te controleren.
 </section>
 
 
+<!-- =========================
+     ACTIVITEITEN
+========================= -->
+
 <section class="card">
 
 <h2>Wat is er vandaag en dit weekend te doen?</h2>
@@ -341,12 +489,19 @@ Controleer daarom voor vertrek altijd de meest recente
 informatie van de organisator.
 </p>
 
-<a href="index" class="btn">
+<a href="https://trendburst-bot.github.io/trendburst/"
+class="btn">
+
 Bekijk meer actuele trends
+
 </a>
 
 </section>
 
+
+<!-- =========================
+     ZWOLLE EN WEER
+========================= -->
 
 <section class="card">
 
@@ -358,18 +513,26 @@ en activiteiten buiten. Controleer daarom de actuele
 weersverwachting voordat je naar Zwolle gaat.
 </p>
 
-<a href="index" class="btn">
+<a href="https://trendburst-bot.github.io/trendburst/"
+class="btn">
+
 🌤️ Bekijk weer vandaag
+
 </a>
 
-<a href="regen" class="btn">
+<a href="https://trendburst-bot.github.io/trendburst/regen"
+class="btn">
+
 ☔ Bekijk regen vandaag
+
 </a>
 
 </section>
 
 
-<!-- SMART LINK -->
+<!-- =========================
+     SMART LINK
+========================= -->
 
 <section class="card">
 
@@ -393,49 +556,62 @@ Bekijk actuele informatie
 </section>
 
 
-<!-- INTERNAL LINKS -->
+<!-- =========================
+     INTERNAL LINKS
+========================= -->
 
 <section class="card links">
 
 <h2>Meer op TrendBurst</h2>
 
-<a href="index">
+
+<a href="https://trendburst-bot.github.io/trendburst/">
 🌤️ Weer Vandaag
 </a>
 
-<a href="buienradar">
+
+<a href="https://trendburst-bot.github.io/trendburst/buienradar">
 🌧️ Buienradar Vandaag
 </a>
 
-<a href="regen">
+
+<a href="https://trendburst-bot.github.io/trendburst/regen">
 ☔ Regen Vandaag
 </a>
 
-<a href="zomer">
+
+<a href="https://trendburst-bot.github.io/trendburst/zomer">
 ☀️ Zomer Vandaag
 </a>
 
-<a href="wind">
+
+<a href="https://trendburst-bot.github.io/trendburst/wind">
 💨 Wind Vandaag
 </a>
 
-<a href="zwolle">
+
+<a href="https://trendburst-bot.github.io/trendburst/zwolle">
 📍 Zwolle Vandaag
 </a>
 
-<a href="landgraaf">
+
+<a href="https://trendburst-bot.github.io/trendburst/landgraaf">
 📰 Landgraaf Vandaag
 </a>
 
-<a href="aardbeving-indonesie">
+
+<a href="https://trendburst-bot.github.io/trendburst/aardbeving-indonesie">
 🌍 Aardbeving Indonesië
 </a>
 
-<a href="aardbeving-spanje">
+
+<a href="https://trendburst-bot.github.io/trendburst/aardbeving-spanje">
 🇪🇸 Aardbeving Spanje
 </a>
 
+
 </section>
+
 
 </main>
 
@@ -458,6 +634,7 @@ timeStyle:"short"
 });
 
 </script>
+
 
 </body>
 </html>
