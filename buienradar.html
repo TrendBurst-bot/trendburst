@@ -11,6 +11,9 @@
 
   <meta name="robots" content="index, follow, max-image-preview:large">
 
+  <link rel="canonical"
+        href="https://trendburst-bot.github.io/trendburst/buienradar.html">
+
   <style>
     * {
       box-sizing: border-box;
@@ -18,6 +21,7 @@
 
     html {
       scroll-behavior: smooth;
+      overflow-x: hidden;
     }
 
     body {
@@ -26,6 +30,7 @@
       background: #f4f7fb;
       color: #202124;
       line-height: 1.6;
+      overflow-x: hidden;
     }
 
     header {
@@ -59,11 +64,18 @@
       box-shadow: 0 2px 10px rgba(0,0,0,.07);
     }
 
+    .update {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 15px;
+    }
+
     .notice {
       background: #eef6ff;
       border-left: 4px solid #1769aa;
       padding: 14px;
       margin: 15px 0;
+      border-radius: 4px;
     }
 
     /* =========================
@@ -100,6 +112,10 @@
       border: 0 !important;
     }
 
+    /* =========================
+       RAIN GRID
+       ========================= */
+
     .rain-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -120,6 +136,14 @@
       margin-bottom: 5px;
     }
 
+    .rain-box p {
+      margin: 6px 0 0;
+    }
+
+    /* =========================
+       BUTTON
+       ========================= */
+
     .cta {
       display: inline-block;
       background: #1769aa;
@@ -134,6 +158,10 @@
     .cta:hover {
       background: #0d4f80;
     }
+
+    /* =========================
+       LINKS
+       ========================= */
 
     .context-link {
       color: #1769aa;
@@ -150,6 +178,11 @@
       color: #1769aa;
       text-decoration: none;
       padding: 9px 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    .links a:last-child {
+      border-bottom: none;
     }
 
     .links a:hover {
@@ -246,67 +279,103 @@
 <body>
 
 <header>
+
   <h1>Buienradar Vandaag</h1>
-  <p>Regenverwachting voor Nederland</p>
+
+  <p>
+    Regenverwachting voor Nederland
+  </p>
+
 </header>
+
 
 <main class="container">
 
+
   <!-- INTRO -->
+
   <section class="card">
 
-    <p>
+    <div class="update">
+
       <strong>Laatst bijgewerkt:</strong>
       <span id="date"></span>
-    </p>
+
+    </div>
+
 
     <h2>Waar gaat het vandaag regenen?</h2>
 
     <p>
       Wil je weten waar vandaag regen wordt verwacht?
       De regenverwachting kan per regio en per uur verschillen.
-      Controleer daarom de actuele ontwikkelingen voordat je naar buiten gaat.
+      Controleer daarom de actuele ontwikkelingen voordat je naar
+      buiten gaat.
     </p>
 
     <p>
       Wil je naast de buienradar ook het algemene weer bekijken?
       Bekijk dan het
-      <a class="context-link" href="/">
+      <a class="context-link"
+         href="https://trendburst-bot.github.io/trendburst/">
         weer vandaag
       </a>
       voor een breder overzicht.
     </p>
 
+
     <div class="notice">
+
       🌧️ <strong>Let op:</strong>
       Regenbuien kunnen zich snel verplaatsen en veranderen.
       Gebruik altijd actuele weerinformatie voor je planning.
+
     </div>
+
 
     <div class="rain-grid">
 
       <div class="rain-box">
+
         <span>🌧️</span>
+
         <strong>Regen</strong>
+
         <p>Actuele verwachting</p>
+
       </div>
 
+
       <div class="rain-box">
+
         <span>⏰</span>
+
         <strong>Per uur</strong>
+
         <p>Komende uren</p>
+
       </div>
 
+
       <div class="rain-box">
+
         <span>💨</span>
+
         <strong>Wind</strong>
+
         <p>Actuele verwachting</p>
+
       </div>
 
+
       <div class="rain-box">
+
         <span>🌡️</span>
+
         <strong>Temperatuur</strong>
+
         <p>Vandaag</p>
+
       </div>
 
     </div>
@@ -356,7 +425,8 @@
 
     <p>
       Voor meer informatie over neerslag kun je ook onze pagina
-      <a class="context-link" href="/regen">
+      <a class="context-link"
+         href="https://trendburst-bot.github.io/trendburst/regen.html">
         Regen vandaag
       </a>
       bekijken.
@@ -384,7 +454,8 @@
     <p>
       Tijdens warme periodes kan het weer snel omslaan. Bekijk daarom
       ook onze pagina over
-      <a class="context-link" href="/zomer">
+      <a class="context-link"
+         href="https://trendburst-bot.github.io/trendburst/zomer.html">
         zomerweer
       </a>
       voor actuele zomertrends.
@@ -406,14 +477,17 @@
 
     <p>
       Bekijk bijvoorbeeld
-      <a class="context-link" href="/aardbeving-indonesie">
+      <a class="context-link"
+         href="https://trendburst-bot.github.io/trendburst/aardbeving-indonesie.html">
         Aardbeving Indonesië
       </a>,
-      <a class="context-link" href="/aardbeving-spanje">
+      <a class="context-link"
+         href="https://trendburst-bot.github.io/trendburst/aardbeving-spanje.html">
         Aardbeving Spanje
       </a>
       of het laatste
-      <a class="context-link" href="/landgraaf">
+      <a class="context-link"
+         href="https://trendburst-bot.github.io/trendburst/landgraaf.html">
         nieuws uit Landgraaf
       </a>.
     </p>
@@ -427,35 +501,35 @@
 
     <h2>🔥 Meer actuele trends</h2>
 
-    <a href="/">
+    <a href="https://trendburst-bot.github.io/trendburst/">
       🌤️ Weer vandaag
     </a>
 
-    <a href="/buienradar">
+    <a href="https://trendburst-bot.github.io/trendburst/buienradar.html">
       🌧️ Buienradar vandaag
     </a>
 
-    <a href="/regen">
+    <a href="https://trendburst-bot.github.io/trendburst/regen.html">
       ☔ Regen vandaag
     </a>
 
-    <a href="/zomer">
+    <a href="https://trendburst-bot.github.io/trendburst/zomer.html">
       ☀️ Zomerweer
     </a>
 
-    <a href="/aardbeving-indonesie">
+    <a href="https://trendburst-bot.github.io/trendburst/aardbeving-indonesie.html">
       🌍 Aardbeving Indonesië
     </a>
 
-    <a href="/aardbeving-spanje">
-      🌍 Aardbeving Spanje
+    <a href="https://trendburst-bot.github.io/trendburst/aardbeving-spanje.html">
+      🇪🇸 Aardbeving Spanje
     </a>
 
-    <a href="/landgraaf">
+    <a href="https://trendburst-bot.github.io/trendburst/landgraaf.html">
       📰 Landgraaf vandaag
     </a>
 
-    <a href="/zwolle">
+    <a href="https://trendburst-bot.github.io/trendburst/zwolle.html">
       🎡 Zwolle vandaag
     </a>
 
@@ -465,11 +539,14 @@
 
 
 <footer>
+
   © 2026 TrendBurst · Weer en actuele trends
+
 </footer>
 
 
 <script>
+
   const now = new Date();
 
   document.getElementById("date").textContent =
@@ -477,6 +554,7 @@
       dateStyle: "long",
       timeStyle: "short"
     });
+
 </script>
 
 </body>
