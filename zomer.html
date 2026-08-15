@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -12,15 +13,23 @@ content="Zomerweer vandaag in Nederland: bekijk temperatuur, regen, wind en weer
 <meta name="robots" content="index, follow, max-image-preview:large">
 
 <link rel="canonical"
-href="https://trendburst-bot.github.io/trendburst/zomer.html">
+href="https://trendburst-bot.github.io/trendburst/zomer">
 
 <style>
+
 *{
 box-sizing:border-box;
 }
 
+html,
 body{
 margin:0;
+padding:0;
+width:100%;
+overflow-x:hidden;
+}
+
+body{
 font-family:Arial,Helvetica,sans-serif;
 background:#f7f8fa;
 color:#222;
@@ -44,6 +53,7 @@ margin:8px 0 0;
 }
 
 .container{
+width:100%;
 max-width:850px;
 margin:20px auto;
 padding:0 15px;
@@ -90,7 +100,14 @@ font-size:28px;
 margin-bottom:5px;
 }
 
+/* =========================
+   RESPONSIVE BANNER
+========================= */
+
 .ad{
+width:100%;
+max-width:100%;
+height:90px;
 min-height:90px;
 display:flex;
 align-items:center;
@@ -101,7 +118,28 @@ margin:20px 0;
 color:#777;
 font-size:13px;
 overflow:hidden;
+position:relative;
 }
+
+/* إعلان 728x90 */
+
+.ad iframe{
+display:block;
+width:728px !important;
+max-width:100% !important;
+height:90px !important;
+border:0 !important;
+}
+
+.ad > div,
+.ad > iframe,
+.ad > ins{
+max-width:100% !important;
+}
+
+/* =========================
+   BUTTON
+========================= */
 
 .btn{
 display:inline-block;
@@ -117,6 +155,10 @@ margin-top:10px;
 .btn:hover{
 background:#d97706;
 }
+
+/* =========================
+   LINKS
+========================= */
 
 .links a{
 display:block;
@@ -134,6 +176,10 @@ border-bottom:none;
 text-decoration:underline;
 }
 
+/* =========================
+   FOOTER
+========================= */
+
 footer{
 text-align:center;
 padding:25px 15px;
@@ -141,22 +187,92 @@ color:#777;
 font-size:13px;
 }
 
+/* =========================
+   MOBILE
+========================= */
+
 @media(max-width:600px){
+
+header{
+padding:24px 12px;
+}
 
 header h1{
 font-size:23px;
 }
 
+header p{
+font-size:14px;
+}
+
+.container{
+padding:0 12px;
+margin-top:15px;
+}
+
 .weather-grid{
 grid-template-columns:1fr 1fr;
+gap:10px;
 }
 
 .card{
 padding:18px;
+border-radius:10px;
+}
+
+.box{
+padding:14px 8px;
+}
+
+.box span{
+font-size:25px;
+}
+
+/* البنر على الجوال */
+
+.ad{
+width:100%;
+height:90px;
+min-height:90px;
+margin:18px 0;
+}
+
+.ad iframe{
+width:100% !important;
+max-width:100% !important;
+height:90px !important;
 }
 
 }
+
+/* شاشات صغيرة جداً */
+
+@media(max-width:360px){
+
+.container{
+padding:0 10px;
+}
+
+.card{
+padding:15px;
+}
+
+.box{
+font-size:13px;
+}
+
+.box strong{
+font-size:14px;
+}
+
+.box p{
+font-size:12px;
+}
+
+}
+
 </style>
+
 </head>
 
 <body>
@@ -169,14 +285,18 @@ padding:18px;
 
 </header>
 
+
 <main class="container">
 
+
+<!-- INTRO -->
 
 <section class="card">
 
 <div class="update">
 
 <strong>Laatst bijgewerkt:</strong>
+
 <span id="date"></span>
 
 </div>
@@ -202,27 +322,46 @@ wind of lokale regenbuien. De weersituatie kan snel veranderen.
 <div class="weather-grid">
 
 <div class="box">
+
 <span>☀️</span>
+
 <strong>Temperatuur</strong>
+
 <p>Verwachting vandaag</p>
+
 </div>
 
+
 <div class="box">
+
 <span>🌧️</span>
+
 <strong>Regen</strong>
+
 <p>Neerslagverwachting</p>
+
 </div>
 
+
 <div class="box">
+
 <span>💨</span>
+
 <strong>Wind</strong>
+
 <p>Windverwachting</p>
+
 </div>
 
+
 <div class="box">
+
 <span>🌤️</span>
+
 <strong>Weer</strong>
+
 <p>Vandaag</p>
+
 </div>
 
 </div>
@@ -230,16 +369,28 @@ wind of lokale regenbuien. De weersituatie kan snel veranderen.
 </section>
 
 
-<!-- BANNER -->
+<!-- =========================
+     BANNER
+========================= -->
 
 <div class="ad">
 
-<!-- PLAATS HIER JE BANNER CODE -->
+<script>
+atOptions = {
+'key' : '77a41a8b52696cf0b6dd4d507cc270d0',
+'format' : 'iframe',
+'height' : 90,
+'width' : 728,
+'params' : {}
+};
+</script>
 
-Advertentie
+<script src="https://www.highperformanceformat.com/77a41a8b52696cf0b6dd4d507cc270d0/invoke.js"></script>
 
 </div>
 
+
+<!-- WARMTE -->
 
 <section class="card">
 
@@ -256,12 +407,14 @@ Wie vandaag buitenactiviteiten plant, kan daarom het beste
 de verwachting voor de eigen regio controleren.
 </p>
 
-<a href="index.html" class="btn">
+<a href="/" class="btn">
 Bekijk het weer vandaag
 </a>
 
 </section>
 
+
+<!-- ZOMER EN REGEN -->
 
 <section class="card">
 
@@ -277,12 +430,14 @@ Controleer daarom de regenverwachting voordat je gaat wandelen,
 fietsen of andere buitenactiviteiten plant.
 </p>
 
-<a href="regen.html" class="btn">
+<a href="/regen" class="btn">
 Bekijk regen vandaag
 </a>
 
 </section>
 
+
+<!-- KOMENDE UREN -->
 
 <section class="card">
 
@@ -293,14 +448,16 @@ Het weer kan gedurende de dag veranderen. Let daarom niet
 alleen op de temperatuur, maar ook op regen, wind en bewolking.
 </p>
 
-<a href="buienradar.html" class="btn">
+<a href="/buienradar" class="btn">
 Bekijk Buienradar
 </a>
 
 </section>
 
 
-<!-- SMART LINK -->
+<!-- =========================
+     SMART LINK
+========================= -->
 
 <section class="card">
 
@@ -311,7 +468,7 @@ Bekijk meer actuele informatie en beschikbare updates.
 </p>
 
 <a
-href="YOUR-SMART-LINK-HERE"
+href="https://www.effectivecpmnetwork.com/es0h17h3?key=b094b0516b68a26bb61ae965405016f9"
 class="btn"
 target="_blank"
 rel="nofollow sponsored noopener">
@@ -323,42 +480,49 @@ Bekijk actuele informatie
 </section>
 
 
-<!-- INTERNAL LINKS -->
+<!-- =========================
+     INTERNAL LINKS
+     ZONDER .HTML
+========================= -->
 
 <section class="card links">
 
 <h2>Meer op TrendBurst</h2>
 
-<a href="index.html">
+<a href="/">
 🌤️ Weer Vandaag
 </a>
 
-<a href="buienradar.html">
+<a href="/buienradar">
 🌧️ Buienradar Vandaag
 </a>
 
-<a href="regen.html">
+<a href="/regen">
 ☔ Regen Vandaag
 </a>
 
-<a href="zomer.html">
+<a href="/zomer">
 ☀️ Zomer Vandaag
 </a>
 
-<a href="wind.html">
+<a href="/wind">
 💨 Wind Vandaag
 </a>
 
-<a href="landgraaf.html">
+<a href="/landgraaf">
 📰 Landgraaf Vandaag
 </a>
 
-<a href="aardbeving-indonesie.html">
+<a href="/aardbeving-indonesie">
 🌍 Aardbeving Indonesië
 </a>
 
-<a href="aardbeving-spanje.html">
+<a href="/aardbeving-spanje">
 🌍 Aardbeving Spanje
+</a>
+
+<a href="/zwolle">
+🎡 Zwolle Vandaag
 </a>
 
 </section>
