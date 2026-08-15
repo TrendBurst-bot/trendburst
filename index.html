@@ -19,12 +19,17 @@
       box-sizing: border-box;
     }
 
+    html {
+      overflow-x: hidden;
+    }
+
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
       background: #f4f7fb;
       color: #202124;
       line-height: 1.6;
+      overflow-x: hidden;
     }
 
     header {
@@ -84,16 +89,54 @@
       margin-top: 5px;
     }
 
+    /* =========================
+       RESPONSIVE BANNER
+       ========================= */
+
     .ad {
+      width: 100%;
       min-height: 90px;
+      margin: 20px 0;
+      padding: 0;
       display: flex;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
       background: #fafafa;
       border: 1px dashed #ddd;
-      margin: 20px 0;
-      color: #777;
-      font-size: 13px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .ad-inner {
+      width: 100%;
+      max-width: 728px;
+      min-height: 90px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .ad-inner iframe {
+      max-width: 100% !important;
+    }
+
+    /* يجعل البنر مناسبًا للجوال */
+    @media (max-width: 600px) {
+
+      .ad {
+        min-height: 90px;
+        margin: 18px 0;
+        border-left: 0;
+        border-right: 0;
+      }
+
+      .ad-inner {
+        width: 100%;
+        max-width: 100%;
+        min-height: 90px;
+      }
+
     }
 
     .notice {
@@ -160,6 +203,11 @@
       .card {
         padding: 18px;
       }
+
+      .cta {
+        max-width: 100%;
+      }
+
     }
   </style>
 </head>
@@ -264,10 +312,26 @@
   </section>
 
 
-  <!-- BANNER -->
+  <!-- RESPONSIVE BANNER -->
 
   <div class="ad">
-    Advertentie
+
+    <div class="ad-inner">
+
+      <script>
+        atOptions = {
+          'key' : '77a41a8b52696cf0b6dd4d507cc270d0',
+          'format' : 'iframe',
+          'height' : 90,
+          'width' : 728,
+          'params' : {}
+        };
+      </script>
+
+      <script src="https://www.highperformanceformat.com/77a41a8b52696cf0b6dd4d507cc270d0/invoke.js"></script>
+
+    </div>
+
   </div>
 
 
@@ -288,7 +352,7 @@
       om de verwachting voor de komende uren regelmatig te controleren.
     </p>
 
-    <a class="cta" href="buienradar.html">
+    <a class="cta" href="buienradar">
       🌧️ Bekijk Buienradar vandaag
     </a>
 
@@ -309,13 +373,13 @@
 
     <p>
       Bekijk daarom onze pagina over
-      <a class="context-link" href="regen.html">
+      <a class="context-link" href="regen">
         regen vandaag
       </a>
       voor meer informatie over de regenverwachting.
     </p>
 
-    <a class="cta" href="regen.html">
+    <a class="cta" href="regen">
       ☔ Regen vandaag bekijken
     </a>
 
@@ -336,7 +400,7 @@
 
     <p>
       Voor regen in de komende uren kun je ook
-      <a class="context-link" href="buienradar.html">
+      <a class="context-link" href="buienradar">
         Buienradar vandaag
       </a>
       bekijken.
@@ -358,7 +422,7 @@
 
     <p>
       Bekijk onze pagina over
-      <a class="context-link" href="zomer.html">
+      <a class="context-link" href="zomer">
         zomerweer
       </a>
       voor meer informatie.
@@ -381,13 +445,13 @@
     <p>
 
       Bekijk bijvoorbeeld
-      <a class="context-link" href="aardbeving-indonesie.html">
+      <a class="context-link" href="aardbeving-indonesie">
         Aardbeving Indonesië
       </a>
 
       of
 
-      <a class="context-link" href="aardbeving-spanje.html">
+      <a class="context-link" href="aardbeving-spanje">
         Aardbeving Spanje
       </a>.
 
@@ -402,35 +466,35 @@
 
     <h2>🔥 Meer actuele trends</h2>
 
-    <a href="index.html">
+    <a href="/">
       🌤️ Weer vandaag
     </a>
 
-    <a href="buienradar.html">
+    <a href="buienradar">
       🌧️ Buienradar vandaag
     </a>
 
-    <a href="regen.html">
+    <a href="regen">
       ☔ Regen vandaag
     </a>
 
-    <a href="zomer.html">
+    <a href="zomer">
       ☀️ Zomerweer
     </a>
 
-    <a href="aardbeving-indonesie.html">
+    <a href="aardbeving-indonesie">
       🌍 Aardbeving Indonesië
     </a>
 
-    <a href="aardbeving-spanje.html">
+    <a href="aardbeving-spanje">
       🇪🇸 Aardbeving Spanje
     </a>
 
-    <a href="landgraaf.html">
+    <a href="landgraaf">
       📰 Landgraaf vandaag
     </a>
 
-    <a href="zwolle.html">
+    <a href="zwolle">
       📍 Zwolle vandaag
     </a>
 
