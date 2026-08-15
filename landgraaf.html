@@ -11,6 +11,9 @@ content="Landgraaf vandaag: politie zoekt drie verdachten na een woningoverval. 
 
 <meta name="robots" content="index, follow, max-image-preview:large">
 
+<link rel="canonical"
+href="https://trendburst-bot.github.io/trendburst/landgraaf">
+
 <style>
 * {
   box-sizing: border-box;
@@ -18,6 +21,7 @@ content="Landgraaf vandaag: politie zoekt drie verdachten na een woningoverval. 
 
 html {
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -47,6 +51,7 @@ header p {
 }
 
 .container {
+  width: 100%;
   max-width: 850px;
   margin: 20px auto;
   padding: 0 15px;
@@ -92,7 +97,6 @@ header p {
   margin-bottom: 5px;
 }
 
-
 /* =========================
    RESPONSIVE BANNER
    ========================= */
@@ -122,9 +126,10 @@ header p {
 }
 
 .ad-inner iframe {
+  display: block !important;
   max-width: 100% !important;
+  border: 0 !important;
 }
-
 
 /* =========================
    BUTTON
@@ -144,7 +149,6 @@ header p {
 .btn:hover {
   background: #0d1d35;
 }
-
 
 /* =========================
    LINKS
@@ -171,7 +175,6 @@ header p {
   text-decoration: underline;
 }
 
-
 /* =========================
    FOOTER
    ========================= */
@@ -183,23 +186,37 @@ footer {
   font-size: 13px;
 }
 
-
 /* =========================
    MOBILE
    ========================= */
 
-@media(max-width:600px) {
+@media (max-width: 600px) {
+
+  header {
+    padding: 23px 12px;
+  }
 
   header h1 {
     font-size: 23px;
   }
 
+  header p {
+    font-size: 14px;
+  }
+
+  .container {
+    padding: 0 10px;
+    margin-top: 15px;
+  }
+
   .info-grid {
     grid-template-columns: 1fr 1fr;
+    gap: 10px;
   }
 
   .card {
     padding: 18px;
+    border-radius: 10px;
   }
 
   .ad {
@@ -215,6 +232,16 @@ footer {
     min-height: 90px;
   }
 
+  .ad-inner iframe {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 90px !important;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
 }
 </style>
 </head>
@@ -231,9 +258,7 @@ footer {
 
 </header>
 
-
 <main class="container">
-
 
 <!-- INTRO -->
 
@@ -265,7 +290,6 @@ footer {
 
   </div>
 
-
   <div class="info-grid">
 
     <div class="info">
@@ -296,7 +320,6 @@ footer {
 
 </section>
 
-
 <!-- BANNER 1 -->
 
 <div class="ad">
@@ -318,7 +341,6 @@ footer {
   </div>
 
 </div>
-
 
 <!-- WAT IS ER GEBEURD -->
 
@@ -349,7 +371,6 @@ footer {
 
 </section>
 
-
 <!-- POLITIE -->
 
 <section class="card">
@@ -374,7 +395,6 @@ footer {
 
 </section>
 
-
 <!-- BANNER 2 -->
 
 <div class="ad">
@@ -397,7 +417,6 @@ footer {
 
 </div>
 
-
 <!-- TREND LINKING -->
 
 <section class="card">
@@ -410,26 +429,26 @@ footer {
   </p>
 
   <p>
-
     Bekijk bijvoorbeeld het
-    <a class="context-link" href="/">
+    <a class="context-link"
+       href="https://trendburst-bot.github.io/trendburst/">
       weer vandaag
     </a>,
 
     de actuele
-    <a class="context-link" href="buienradar">
+    <a class="context-link"
+       href="https://trendburst-bot.github.io/trendburst/buienradar">
       Buienradar
     </a>
 
     of de
-    <a class="context-link" href="regen">
+    <a class="context-link"
+       href="https://trendburst-bot.github.io/trendburst/regen">
       regenverwachting
     </a>.
-
   </p>
 
 </section>
-
 
 <!-- ALL INTERNAL LINKS -->
 
@@ -437,48 +456,44 @@ footer {
 
   <h2>🔥 Meer actuele onderwerpen</h2>
 
-  <a href="/">
+  <a href="https://trendburst-bot.github.io/trendburst/">
     🌤️ Weer vandaag
   </a>
 
-  <a href="buienradar">
+  <a href="https://trendburst-bot.github.io/trendburst/buienradar">
     🌧️ Buienradar vandaag
   </a>
 
-  <a href="regen">
+  <a href="https://trendburst-bot.github.io/trendburst/regen">
     ☔ Regen vandaag
   </a>
 
-  <a href="zomer">
+  <a href="https://trendburst-bot.github.io/trendburst/zomer">
     ☀️ Zomerweer
   </a>
 
-  <a href="aardbeving-indonesie">
+  <a href="https://trendburst-bot.github.io/trendburst/aardbeving-indonesie">
     🌍 Aardbeving Indonesië
   </a>
 
-  <a href="aardbeving-spanje">
+  <a href="https://trendburst-bot.github.io/trendburst/aardbeving-spanje">
     🇪🇸 Aardbeving Spanje
   </a>
 
-  <a href="landgraaf">
+  <a href="https://trendburst-bot.github.io/trendburst/landgraaf">
     📰 Landgraaf vandaag
   </a>
 
-  <a href="zwolle">
+  <a href="https://trendburst-bot.github.io/trendburst/zwolle">
     📍 Zwolle vandaag
   </a>
 
 </section>
 
-
 </main>
 
-
 <footer>
-
   © 2026 TrendBurst · Actuele trends en nieuws
-
 </footer>
 
 </body>
