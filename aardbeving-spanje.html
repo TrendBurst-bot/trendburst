@@ -11,6 +11,9 @@
 
   <meta name="robots" content="index, follow, max-image-preview:large">
 
+  <link rel="canonical"
+        href="https://trendburst-bot.github.io/trendburst/aardbeving-spanje.html">
+
   <style>
     * {
       box-sizing: border-box;
@@ -18,6 +21,7 @@
 
     html {
       scroll-behavior: smooth;
+      overflow-x: hidden;
     }
 
     body {
@@ -26,6 +30,7 @@
       background: #f5f7fa;
       color: #222;
       line-height: 1.65;
+      overflow-x: hidden;
     }
 
     header {
@@ -56,7 +61,13 @@
       padding: 22px;
       margin-bottom: 18px;
       border-radius: 12px;
-      box-shadow: 0 2px 9px rgba(0,0,0,.07);
+      box-shadow: 0 2px 9px rgba(0, 0, 0, .07);
+    }
+
+    .update {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 15px;
     }
 
     .status {
@@ -64,6 +75,7 @@
       border-left: 4px solid #c62828;
       padding: 14px;
       margin: 18px 0;
+      border-radius: 4px;
     }
 
     .info-grid {
@@ -84,6 +96,10 @@
       display: block;
       font-size: 28px;
       margin-bottom: 6px;
+    }
+
+    .info-box p {
+      margin: 6px 0 0;
     }
 
     /* =========================
@@ -122,6 +138,10 @@
       border: 0 !important;
     }
 
+    /* =========================
+       BUTTON
+       ========================= */
+
     .btn {
       display: inline-block;
       background: #c62828;
@@ -136,6 +156,10 @@
     .btn:hover {
       background: #9b1c1c;
     }
+
+    /* =========================
+       LINKS
+       ========================= */
 
     .context-link {
       color: #1769aa;
@@ -152,6 +176,11 @@
       color: #1769aa;
       text-decoration: none;
       padding: 8px 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    .links a:last-child {
+      border-bottom: none;
     }
 
     .links a:hover {
@@ -230,16 +259,16 @@
 
     @media (max-width: 360px) {
 
-      .info-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-
       .card {
         padding: 15px;
       }
 
       body {
         font-size: 15px;
+      }
+
+      .info-grid {
+        grid-template-columns: 1fr 1fr;
       }
     }
   </style>
@@ -248,67 +277,103 @@
 <body>
 
 <header>
+
   <h1>Aardbeving Spanje</h1>
-  <p>Actuele informatie en laatste ontwikkelingen</p>
+
+  <p>
+    Actuele informatie en laatste ontwikkelingen
+  </p>
+
 </header>
+
 
 <main class="container">
 
+
   <!-- INTRO -->
+
   <section class="card">
 
-    <p>
+    <div class="update">
+
       <strong>Laatst bijgewerkt:</strong>
       <span id="date"></span>
-    </p>
+
+    </div>
+
 
     <h2>Laatste informatie over de aardbeving in Spanje</h2>
 
     <p>
       Wanneer er een aardbeving wordt gemeld in Spanje, kunnen de eerste
       gegevens snel veranderen. Informatie over locatie, magnitude en
-      eventuele gevolgen wordt doorgaans bijgewerkt wanneer nieuwe
-      metingen beschikbaar komen.
+      eventuele gevolgen wordt bijgewerkt wanneer nieuwe metingen
+      beschikbaar komen.
     </p>
 
     <p>
       Bekijk ook onze pagina over
-      <a class="context-link" href="/aardbeving-indonesie">
+      <a class="context-link"
+         href="https://trendburst-bot.github.io/trendburst/aardbeving-indonesie.html">
         Aardbeving Indonesië
       </a>
       voor informatie over andere seismische ontwikkelingen.
     </p>
 
+
     <div class="status">
+
       ⚠️ <strong>Belangrijk:</strong>
+
       Gebruik voor actuele waarschuwingen en veiligheidsinformatie
       altijd officiële bronnen en lokale autoriteiten.
+
     </div>
+
 
     <div class="info-grid">
 
       <div class="info-box">
+
         <span>🇪🇸</span>
+
         <strong>Gebied</strong>
+
         <p>Spanje</p>
+
       </div>
 
+
       <div class="info-box">
+
         <span>🌍</span>
+
         <strong>Seismische activiteit</strong>
+
         <p>Kan veranderen</p>
+
       </div>
 
+
       <div class="info-box">
+
         <span>⚠️</span>
+
         <strong>Naschokken</strong>
+
         <p>Mogelijk</p>
+
       </div>
 
+
       <div class="info-box">
+
         <span>📡</span>
+
         <strong>Updates</strong>
+
         <p>Nieuwe gegevens</p>
+
       </div>
 
     </div>
@@ -319,6 +384,7 @@
   <!-- RESPONSIVE BANNER -->
 
   <div class="ad">
+
     <div class="ad-inner">
 
       <script>
@@ -334,6 +400,7 @@
       <script src="https://www.highperformanceformat.com/77a41a8b52696cf0b6dd4d507cc270d0/invoke.js"></script>
 
     </div>
+
   </div>
 
 
@@ -358,7 +425,8 @@
     <p>
       Wil je ook andere actuele onderwerpen bekijken?
       Ga dan naar
-      <a class="context-link" href="/">
+      <a class="context-link"
+         href="https://trendburst-bot.github.io/trendburst/">
         TrendBurst
       </a>
       voor de nieuwste trends.
@@ -376,22 +444,26 @@
     <p>
       Naast aardbevingen volgen we ook actuele weerontwikkelingen.
       Bekijk het
-      <a class="context-link" href="/">
+      <a class="context-link"
+         href="https://trendburst-bot.github.io/trendburst/">
         weer van vandaag
       </a>,
       de
-      <a class="context-link" href="/buienradar">
+      <a class="context-link"
+         href="https://trendburst-bot.github.io/trendburst/buienradar.html">
         Buienradar
       </a>
       of de actuele
-      <a class="context-link" href="/regen">
+      <a class="context-link"
+         href="https://trendburst-bot.github.io/trendburst/regen.html">
         regenverwachting
       </a>.
     </p>
 
     <p>
       Voor zomerse ontwikkelingen kun je ook onze pagina over
-      <a class="context-link" href="/zomer">
+      <a class="context-link"
+         href="https://trendburst-bot.github.io/trendburst/zomer.html">
         het zomerweer
       </a>
       bekijken.
@@ -412,48 +484,50 @@
       op officiële waarschuwingen.
     </p>
 
-    <a href="/" class="btn">
+    <a
+      href="https://trendburst-bot.github.io/trendburst/"
+      class="btn">
       Meer actuele trends
     </a>
 
   </section>
 
 
-  <!-- ALL INTERNAL LINKS -->
+  <!-- INTERNAL LINKS -->
 
   <section class="card links">
 
     <h2>🔥 Meer op TrendBurst</h2>
 
-    <a href="/">
+    <a href="https://trendburst-bot.github.io/trendburst/">
       🌤️ Weer vandaag
     </a>
 
-    <a href="/buienradar">
+    <a href="https://trendburst-bot.github.io/trendburst/buienradar.html">
       🌧️ Buienradar vandaag
     </a>
 
-    <a href="/regen">
+    <a href="https://trendburst-bot.github.io/trendburst/regen.html">
       ☔ Regen vandaag
     </a>
 
-    <a href="/zomer">
+    <a href="https://trendburst-bot.github.io/trendburst/zomer.html">
       ☀️ Zomerweer
     </a>
 
-    <a href="/aardbeving-indonesie">
+    <a href="https://trendburst-bot.github.io/trendburst/aardbeving-indonesie.html">
       🌍 Aardbeving Indonesië
     </a>
 
-    <a href="/aardbeving-spanje">
-      🌍 Aardbeving Spanje
+    <a href="https://trendburst-bot.github.io/trendburst/aardbeving-spanje.html">
+      🇪🇸 Aardbeving Spanje
     </a>
 
-    <a href="/landgraaf">
+    <a href="https://trendburst-bot.github.io/trendburst/landgraaf.html">
       📰 Landgraaf vandaag
     </a>
 
-    <a href="/zwolle">
+    <a href="https://trendburst-bot.github.io/trendburst/zwolle.html">
       🎡 Zwolle vandaag
     </a>
 
@@ -463,16 +537,22 @@
 
 
 <footer>
+
   © 2026 TrendBurst · Actuele trends en nieuws
+
 </footer>
 
 
 <script>
+
+  const now = new Date();
+
   document.getElementById("date").textContent =
-    new Date().toLocaleString("nl-NL", {
+    now.toLocaleString("nl-NL", {
       dateStyle: "long",
       timeStyle: "short"
     });
+
 </script>
 
 </body>
