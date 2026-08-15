@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Zomer Vandaag: Weer, Temperatuur en Verwachting</title>
+
+<meta name="description"
+content="Zomerweer vandaag in Nederland. Bekijk de actuele temperatuur, weersverwachting, regen en wind voor vandaag en de komende uren.">
+
+<meta name="robots" content="index, follow, max-image-preview:large">
+
+<style>
+*{
+box-sizing:border-box;
+}
+
+body{
+margin:0;
+font-family:Arial,Helvetica,sans-serif;
+background:#f7f8fa;
+color:#222;
+line-height:1.6;
+}
+
+header{
+background:#f59e0b;
+color:white;
+text-align:center;
+padding:28px 15px;
+}
+
+header h1{
+margin:0;
+font-size:28px;
+}
+
+header p{
+margin:7px 0 0;
+}
+
+.container{
+max-width:850px;
+margin:20px auto;
+padding:0 15px;
+}
+
+.card{
+background:white;
+padding:22px;
+margin-bottom:18px;
+border-radius:12px;
+box-shadow:0 2px 9px rgba(0,0,0,.07);
+}
+
+.update{
+font-size:13px;
+color:#777;
+margin-bottom:15px;
+}
+
+.weather-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:12px;
+margin-top:18px;
+}
+
+.box{
+background:#fff8e7;
+padding:17px;
+border-radius:9px;
+text-align:center;
+}
+
+.box span{
+display:block;
+font-size:28px;
+margin-bottom:5px;
+}
+
+.ad{
+min-height:90px;
+display:flex;
+align-items:center;
+justify-content:center;
+background:#fafafa;
+border:1px dashed #ccc;
+margin:20px 0;
+color:#777;
+font-size:13px;
+}
+
+.btn{
+display:inline-block;
+background:#f59e0b;
+color:white;
+text-decoration:none;
+padding:12px 21px;
+border-radius:7px;
+font-weight:bold;
+margin-top:10px;
+}
+
+.btn:hover{
+background:#d97706;
+}
+
+.links a{
+display:block;
+padding:8px 0;
+color:#1769aa;
+text-decoration:none;
+}
+
+footer{
+text-align:center;
+padding:25px;
+color:#777;
+font-size:13px;
+}
+
+@media(max-width:600px){
+
+header h1{
+font-size:23px;
+}
+
+.weather-grid{
+grid-template-columns:1fr 1fr;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<h1>Zomer Vandaag</h1>
+
+<p>Weer, temperatuur en actuele verwachting</p>
+
+</header>
+
+<main class="container">
+
+<section class="card">
+
+<div class="update">
+Laatst bijgewerkt:
+<span id="date"></span>
+</div>
+
+<h2>Het zomerweer vandaag</h2>
+
+<p>
+Het zomerweer kan gedurende de dag veranderen.
+Temperatuur, wind en neerslag verschillen per regio.
+Bekijk daarom regelmatig de actuele weersverwachting voordat je naar buiten gaat.
+</p>
+
+<div class="weather-grid">
+
+<div class="box">
+<span>☀️</span>
+<strong>Temperatuur</strong>
+<p>Actuele verwachting</p>
+</div>
+
+<div class="box">
+<span>🌧️</span>
+<strong>Regen</strong>
+<p>Neerslagverwachting</p>
+</div>
+
+<div class="box">
+<span>💨</span>
+<strong>Wind</strong>
+<p>Windverwachting</p>
+</div>
+
+<div class="box">
+<span>🌤️</span>
+<strong>Weer</strong>
+<p>Vandaag</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- Banner -->
+
+<div class="ad">
+Advertentie
+</div>
+
+<section class="card">
+
+<h2>Wordt het vandaag warm?</h2>
+
+<p>
+Tijdens warme zomerdagen kunnen temperaturen snel oplopen.
+Let vooral op de verwachting voor de middag en vroege avond.
+Ook wind en bewolking kunnen invloed hebben op hoe warm het aanvoelt.
+</p>
+
+<p>
+Voor actuele informatie is het verstandig om de verwachting voor jouw
+regio regelmatig opnieuw te controleren.
+</p>
+
+<a href="index.html" class="btn">
+Bekijk het weer vandaag
+</a>
+
+</section>
+
+<section class="card">
+
+<h2>Zomerweer en regen</h2>
+
+<p>
+Ook in de zomer kunnen plotselinge regenbuien ontstaan.
+Controleer daarom de regenverwachting wanneer je buitenactiviteiten plant.
+</p>
+
+<a href="regen.html" class="btn">
+Bekijk regen vandaag
+</a>
+
+</section>
+
+<section class="card links">
+
+<h2>Meer actuele informatie</h2>
+
+<a href="index.html">
+🌤️ Weer vandaag
+</a>
+
+<a href="buienradar.html">
+🌧️ Buienradar vandaag
+</a>
+
+<a href="regen.html">
+☔ Regen vandaag
+</a>
+
+<a href="#">
+🌡️ Temperatuur vandaag
+</a>
+
+</section>
+
+</main>
+
+<footer>
+
+© 2026 TrendBurst · Actuele trends en weer
+
+</footer>
+
+<script>
+
+document.getElementById("date").textContent =
+new Date().toLocaleString("nl-NL",{
+dateStyle:"long",
+timeStyle:"short"
+});
+
+</script>
+
+</body>
+</html>
