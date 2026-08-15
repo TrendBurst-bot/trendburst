@@ -7,9 +7,12 @@
 <title>Zomer Vandaag: Weer, Temperatuur en Verwachting</title>
 
 <meta name="description"
-content="Zomerweer vandaag in Nederland. Bekijk de actuele temperatuur, weersverwachting, regen en wind voor vandaag en de komende uren.">
+content="Zomerweer vandaag in Nederland: bekijk temperatuur, regen, wind en weersverwachting voor vandaag en de komende uren.">
 
 <meta name="robots" content="index, follow, max-image-preview:large">
+
+<link rel="canonical"
+href="https://trendburst-bot.github.io/trendburst/zomer.html">
 
 <style>
 *{
@@ -21,7 +24,7 @@ margin:0;
 font-family:Arial,Helvetica,sans-serif;
 background:#f7f8fa;
 color:#222;
-line-height:1.6;
+line-height:1.65;
 }
 
 header{
@@ -37,7 +40,7 @@ font-size:28px;
 }
 
 header p{
-margin:7px 0 0;
+margin:8px 0 0;
 }
 
 .container{
@@ -58,6 +61,13 @@ box-shadow:0 2px 9px rgba(0,0,0,.07);
 font-size:13px;
 color:#777;
 margin-bottom:15px;
+}
+
+.notice{
+background:#fff8e7;
+border-left:4px solid #f59e0b;
+padding:15px;
+margin:18px 0;
 }
 
 .weather-grid{
@@ -90,6 +100,7 @@ border:1px dashed #ccc;
 margin:20px 0;
 color:#777;
 font-size:13px;
+overflow:hidden;
 }
 
 .btn{
@@ -109,14 +120,23 @@ background:#d97706;
 
 .links a{
 display:block;
-padding:8px 0;
+padding:9px 0;
 color:#1769aa;
 text-decoration:none;
+border-bottom:1px solid #eee;
+}
+
+.links a:last-child{
+border-bottom:none;
+}
+
+.links a:hover{
+text-decoration:underline;
 }
 
 footer{
 text-align:center;
-padding:25px;
+padding:25px 15px;
 color:#777;
 font-size:13px;
 }
@@ -129,6 +149,10 @@ font-size:23px;
 
 .weather-grid{
 grid-template-columns:1fr 1fr;
+}
+
+.card{
+padding:18px;
 }
 
 }
@@ -147,27 +171,40 @@ grid-template-columns:1fr 1fr;
 
 <main class="container">
 
+
 <section class="card">
 
 <div class="update">
-Laatst bijgewerkt:
+
+<strong>Laatst bijgewerkt:</strong>
 <span id="date"></span>
+
 </div>
 
 <h2>Het zomerweer vandaag</h2>
 
 <p>
 Het zomerweer kan gedurende de dag veranderen.
-Temperatuur, wind en neerslag verschillen per regio.
-Bekijk daarom regelmatig de actuele weersverwachting voordat je naar buiten gaat.
+Temperatuur, wind en neerslag kunnen per regio verschillen.
+Daarom is het verstandig om de actuele weersverwachting
+regelmatig opnieuw te controleren.
 </p>
+
+<div class="notice">
+
+☀️ <strong>Zomerweer:</strong>
+Warme dagen kunnen worden afgewisseld met bewolking,
+wind of lokale regenbuien. De weersituatie kan snel veranderen.
+
+</div>
+
 
 <div class="weather-grid">
 
 <div class="box">
 <span>☀️</span>
 <strong>Temperatuur</strong>
-<p>Actuele verwachting</p>
+<p>Verwachting vandaag</p>
 </div>
 
 <div class="box">
@@ -192,25 +229,31 @@ Bekijk daarom regelmatig de actuele weersverwachting voordat je naar buiten gaat
 
 </section>
 
-<!-- Banner -->
+
+<!-- BANNER -->
 
 <div class="ad">
+
+<!-- PLAATS HIER JE BANNER CODE -->
+
 Advertentie
+
 </div>
+
 
 <section class="card">
 
 <h2>Wordt het vandaag warm?</h2>
 
 <p>
-Tijdens warme zomerdagen kunnen temperaturen snel oplopen.
-Let vooral op de verwachting voor de middag en vroege avond.
-Ook wind en bewolking kunnen invloed hebben op hoe warm het aanvoelt.
+Tijdens warme zomerdagen kunnen temperaturen vooral rond
+de middag en vroege avond oplopen. Wind en bewolking kunnen
+echter invloed hebben op hoe warm het buiten aanvoelt.
 </p>
 
 <p>
-Voor actuele informatie is het verstandig om de verwachting voor jouw
-regio regelmatig opnieuw te controleren.
+Wie vandaag buitenactiviteiten plant, kan daarom het beste
+de verwachting voor de eigen regio controleren.
 </p>
 
 <a href="index.html" class="btn">
@@ -219,13 +262,19 @@ Bekijk het weer vandaag
 
 </section>
 
+
 <section class="card">
 
 <h2>Zomerweer en regen</h2>
 
 <p>
-Ook in de zomer kunnen plotselinge regenbuien ontstaan.
-Controleer daarom de regenverwachting wanneer je buitenactiviteiten plant.
+Ook tijdens warme zomerdagen kunnen plotselinge regenbuien
+ontstaan. De kans op neerslag kan per regio verschillen.
+</p>
+
+<p>
+Controleer daarom de regenverwachting voordat je gaat wandelen,
+fietsen of andere buitenactiviteiten plant.
 </p>
 
 <a href="regen.html" class="btn">
@@ -234,40 +283,102 @@ Bekijk regen vandaag
 
 </section>
 
+
+<section class="card">
+
+<h2>Weer tijdens de komende uren</h2>
+
+<p>
+Het weer kan gedurende de dag veranderen. Let daarom niet
+alleen op de temperatuur, maar ook op regen, wind en bewolking.
+</p>
+
+<a href="buienradar.html" class="btn">
+Bekijk Buienradar
+</a>
+
+</section>
+
+
+<!-- SMART LINK -->
+
+<section class="card">
+
+<h2>Bekijk actuele informatie</h2>
+
+<p>
+Bekijk meer actuele informatie en beschikbare updates.
+</p>
+
+<a
+href="YOUR-SMART-LINK-HERE"
+class="btn"
+target="_blank"
+rel="nofollow sponsored noopener">
+
+Bekijk actuele informatie
+
+</a>
+
+</section>
+
+
+<!-- INTERNAL LINKS -->
+
 <section class="card links">
 
-<h2>Meer actuele informatie</h2>
+<h2>Meer op TrendBurst</h2>
 
 <a href="index.html">
-🌤️ Weer vandaag
+🌤️ Weer Vandaag
 </a>
 
 <a href="buienradar.html">
-🌧️ Buienradar vandaag
+🌧️ Buienradar Vandaag
 </a>
 
 <a href="regen.html">
-☔ Regen vandaag
+☔ Regen Vandaag
 </a>
 
-<a href="#">
-🌡️ Temperatuur vandaag
+<a href="zomer.html">
+☀️ Zomer Vandaag
+</a>
+
+<a href="wind.html">
+💨 Wind Vandaag
+</a>
+
+<a href="landgraaf.html">
+📰 Landgraaf Vandaag
+</a>
+
+<a href="aardbeving-indonesie.html">
+🌍 Aardbeving Indonesië
+</a>
+
+<a href="aardbeving-spanje.html">
+🌍 Aardbeving Spanje
 </a>
 
 </section>
 
 </main>
 
+
 <footer>
 
-© 2026 TrendBurst · Actuele trends en weer
+© 2026 TrendBurst · Actuele trends en weersinformatie
 
 </footer>
 
+
 <script>
 
+const now = new Date();
+
 document.getElementById("date").textContent =
-new Date().toLocaleString("nl-NL",{
+now.toLocaleString("nl-NL",{
 dateStyle:"long",
 timeStyle:"short"
 });
