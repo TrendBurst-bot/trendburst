@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Weer Vandaag: Actuele Weersverwachting, Regen & Temperatuur</title>
+
+  <meta name="description"
+        content="Weer vandaag in Nederland: actuele temperatuur, regen, wind en weersverwachting. Bekijk de verwachting voor vandaag en de komende uren.">
+
+  <meta name="robots" content="index, follow, max-image-preview:large">
+
+  <link rel="canonical" href="https://trendburst-bot.github.io/trendburst/">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f7fb;
+      color: #202124;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #0b57d0;
+      color: white;
+      padding: 22px 16px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 27px;
+    }
+
+    header p {
+      margin: 7px 0 0;
+      opacity: 0.95;
+    }
+
+    .container {
+      max-width: 850px;
+      margin: 20px auto;
+      padding: 0 15px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 22px;
+      margin-bottom: 18px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+    }
+
+    .update {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 15px;
+    }
+
+    .weather-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    .weather-item {
+      background: #f1f5fb;
+      padding: 15px;
+      border-radius: 9px;
+      text-align: center;
+    }
+
+    .weather-item strong {
+      display: block;
+      font-size: 22px;
+      margin-top: 5px;
+    }
+
+    .ad {
+      min-height: 90px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #fafafa;
+      border: 1px dashed #ddd;
+      margin: 20px 0;
+      color: #777;
+      font-size: 13px;
+    }
+
+    .cta {
+      display: inline-block;
+      background: #0b57d0;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 7px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 8px;
+    }
+
+    .cta:hover {
+      background: #0846a8;
+    }
+
+    .links a {
+      display: block;
+      padding: 9px 0;
+      color: #0b57d0;
+      text-decoration: none;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px 15px;
+      color: #777;
+      font-size: 13px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 23px;
+      }
+
+      .weather-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Weer Vandaag</h1>
+  <p>Actuele weersverwachting in Nederland</p>
+</header>
+
+<main class="container">
+
+  <section class="card">
+
+    <div class="update">
+      Laatst bijgewerkt: <span id="date"></span>
+    </div>
+
+    <h2>Het weer vandaag</h2>
+
+    <p>
+      Wil je weten hoe het weer vandaag wordt?
+      Bekijk de actuele verwachting voor temperatuur, regen en wind
+      en houd de weersontwikkelingen gedurende de dag in de gaten.
+    </p>
+
+    <div class="weather-grid">
+
+      <div class="weather-item">
+        🌡️ Temperatuur
+        <strong>Bekijk actuele data</strong>
+      </div>
+
+      <div class="weather-item">
+        🌧️ Regen
+        <strong>Bekijk verwachting</strong>
+      </div>
+
+      <div class="weather-item">
+        💨 Wind
+        <strong>Bekijk windkracht</strong>
+      </div>
+
+      <div class="weather-item">
+        ☀️ Verwachting
+        <strong>Vandaag</strong>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- BANNER -->
+  <div class="ad">
+    Advertentie
+  </div>
+
+  <section class="card">
+
+    <h2>Weer per uur</h2>
+
+    <p>
+      Het weer kan gedurende de dag snel veranderen.
+      Controleer daarom regelmatig de verwachting voor de komende uren,
+      vooral wanneer je buitenactiviteiten plant.
+    </p>
+
+    <a class="cta" href="#verwachting">
+      Bekijk de weersverwachting
+    </a>
+
+  </section>
+
+  <section class="card" id="verwachting">
+
+    <h2>Weer morgen</h2>
+
+    <p>
+      Ook morgen kan het weer verschillen per regio.
+      Temperatuur, wind en neerslag kunnen gedurende de dag veranderen.
+      Bekijk daarom de nieuwste verwachting voordat je plannen maakt.
+    </p>
+
+  </section>
+
+  <section class="card links">
+
+    <h2>Meer over het weer</h2>
+
+    <a href="#">🌧️ Regen vandaag</a>
+    <a href="#">💨 Wind vandaag</a>
+    <a href="#">🌡️ Temperatuur vandaag</a>
+    <a href="#">⏰ Weer morgen per uur</a>
+
+  </section>
+
+</main>
+
+<footer>
+  © 2026 TrendBurst · Actuele informatie over trends en weer
+</footer>
+
+<script>
+  const now = new Date();
+
+  document.getElementById("date").textContent =
+    now.toLocaleString("nl-NL", {
+      dateStyle: "long",
+      timeStyle: "short"
+    });
+</script>
+
+</body>
+</html>
