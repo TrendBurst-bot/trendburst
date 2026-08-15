@@ -81,7 +81,10 @@
       margin-bottom: 6px;
     }
 
+    /* RESPONSIVE BANNER */
+
     .ad {
+      width: 100%;
       min-height: 90px;
       display: flex;
       align-items: center;
@@ -91,6 +94,22 @@
       margin: 20px 0;
       color: #777;
       font-size: 13px;
+      overflow: hidden;
+    }
+
+    .ad-inner {
+      width: 100%;
+      max-width: 728px;
+      min-height: 90px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .ad-inner iframe {
+      max-width: 100% !important;
+      border: 0;
     }
 
     .btn {
@@ -137,12 +156,29 @@
     }
 
     @media (max-width: 600px) {
+
       header h1 {
         font-size: 23px;
       }
 
       .info-grid {
         grid-template-columns: 1fr 1fr;
+      }
+
+      .ad {
+        width: 100%;
+        min-height: 90px;
+        padding: 0;
+      }
+
+      .ad-inner {
+        width: 100%;
+        max-width: 100%;
+        min-height: 90px;
+      }
+
+      .ad-inner iframe {
+        max-width: 100% !important;
       }
     }
   </style>
@@ -175,7 +211,7 @@
 
     <p>
       Bekijk ook onze pagina over
-      <a class="context-link" href="aardbeving-spanje.html">
+      <a class="context-link" href="aardbeving-spanje">
         Aardbeving Spanje
       </a>
       voor andere actuele informatie over seismische activiteit.
@@ -217,12 +253,30 @@
 
   </section>
 
-  <!-- BANNER -->
+
+  <!-- RESPONSIVE BANNER -->
+
   <div class="ad">
-    Advertentie
+    <div class="ad-inner">
+
+      <script>
+        atOptions = {
+          'key' : '77a41a8b52696cf0b6dd4d507cc270d0',
+          'format' : 'iframe',
+          'height' : 90,
+          'width' : 728,
+          'params' : {}
+        };
+      </script>
+
+      <script src="https://www.highperformanceformat.com/77a41a8b52696cf0b6dd4d507cc270d0/invoke.js"></script>
+
+    </div>
   </div>
 
+
   <!-- INFORMATIE -->
+
   <section class="card">
 
     <h2>Waarom Indonesië regelmatig aardbevingen heeft</h2>
@@ -241,14 +295,16 @@
 
     <p>
       Voor andere actuele ontwikkelingen kun je ook teruggaan naar
-      <a class="context-link" href="index.html">
+      <a class="context-link" href="./">
         TrendBurst en het laatste nieuws
       </a>.
     </p>
 
   </section>
 
+
   <!-- RELATED WEATHER -->
+
   <section class="card">
 
     <h2>Andere actuele onderwerpen</h2>
@@ -260,22 +316,24 @@
 
     <p>
       Bekijk bijvoorbeeld het
-      <a class="context-link" href="index.html">
+      <a class="context-link" href="./">
         weer van vandaag
       </a>,
       de
-      <a class="context-link" href="buienradar.html">
+      <a class="context-link" href="buienradar">
         actuele Buienradar
       </a>
       of de
-      <a class="context-link" href="regen.html">
+      <a class="context-link" href="regen">
         regenverwachting
       </a>.
     </p>
 
   </section>
 
+
   <!-- SAFETY -->
+
   <section class="card">
 
     <h2>Wat moet je doen bij een aardbeving?</h2>
@@ -286,46 +344,48 @@
       hoogte van officiële waarschuwingen.
     </p>
 
-    <a href="index.html" class="btn">
+    <a href="./" class="btn">
       Terug naar TrendBurst
     </a>
 
   </section>
 
+
   <!-- ALL INTERNAL LINKS -->
+
   <section class="card links">
 
     <h2>🔥 Meer actuele trends</h2>
 
-    <a href="index.html">
+    <a href="./">
       🌤️ Weer vandaag
     </a>
 
-    <a href="buienradar.html">
+    <a href="buienradar">
       🌧️ Buienradar vandaag
     </a>
 
-    <a href="regen.html">
+    <a href="regen">
       ☔ Regen vandaag
     </a>
 
-    <a href="zomer.html">
+    <a href="zomer">
       ☀️ Zomerweer
     </a>
 
-    <a href="aardbeving-indonesie.html">
+    <a href="aardbeving-indonesie">
       🌍 Aardbeving Indonesië
     </a>
 
-    <a href="aardbeving-spanje.html">
+    <a href="aardbeving-spanje">
       🌍 Aardbeving Spanje
     </a>
 
-    <a href="landgraaf.html">
+    <a href="landgraaf">
       📰 Landgraaf vandaag
     </a>
 
-    <a href="zwolle.html">
+    <a href="zwolle">
       🎡 Zwolle vandaag
     </a>
 
@@ -333,9 +393,11 @@
 
 </main>
 
+
 <footer>
   © 2026 TrendBurst · Actuele trends en nieuws
 </footer>
+
 
 <script>
   document.getElementById("date").textContent =
