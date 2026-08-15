@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Regen Vandaag: Waar en Wanneer Gaat Het Regenen?</title>
+
+<meta name="description"
+content="Regen vandaag in Nederland. Bekijk informatie over regenverwachting, neerslag, wind en het weer voor de komende uren.">
+
+<meta name="robots" content="index, follow">
+
+<style>
+body{
+font-family:Arial,sans-serif;
+background:#f5f7fa;
+margin:0;
+color:#333;
+line-height:1.6;
+}
+
+header{
+background:#1e88e5;
+color:#fff;
+padding:25px;
+text-align:center;
+}
+
+.container{
+max-width:850px;
+margin:auto;
+padding:20px;
+}
+
+.card{
+background:#fff;
+padding:20px;
+margin-bottom:20px;
+border-radius:10px;
+box-shadow:0 2px 8px rgba(0,0,0,.08);
+}
+
+.ad-box{
+height:90px;
+display:flex;
+align-items:center;
+justify-content:center;
+border:1px dashed #ccc;
+background:#fafafa;
+margin:20px 0;
+}
+
+.info-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:12px;
+}
+
+.info{
+background:#eef5ff;
+padding:15px;
+border-radius:8px;
+text-align:center;
+}
+
+.btn{
+display:inline-block;
+background:#1e88e5;
+color:#fff;
+padding:12px 20px;
+border-radius:6px;
+text-decoration:none;
+font-weight:bold;
+}
+
+footer{
+text-align:center;
+padding:20px;
+color:#777;
+font-size:13px;
+}
+</style>
+</head>
+<body>
+
+<header>
+<h1>Regen Vandaag</h1>
+<p>Actuele regenverwachting en weersinformatie</p>
+</header>
+
+<div class="container">
+
+<div class="card">
+<p><strong>Laatste update:</strong> <span id="date"></span></p>
+
+<h2>Waar gaat het vandaag regenen?</h2>
+
+<p>
+Regen kan gedurende de dag sterk verschillen per regio.
+Controleer regelmatig de actuele weersverwachting om op de hoogte te blijven
+van mogelijke buien en veranderingen in het weer.
+</p>
+
+<div class="info-grid">
+
+<div class="info">
+🌧️<br>
+<strong>Regen</strong>
+</div>
+
+<div class="info">
+⏰<br>
+<strong>Komende uren</strong>
+</div>
+
+<div class="info">
+💨<br>
+<strong>Wind</strong>
+</div>
+
+<div class="info">
+🌡️<br>
+<strong>Temperatuur</strong>
+</div>
+
+</div>
+</div>
+
+<!-- Banner Area -->
+<div class="ad-box">
+Advertentie
+</div>
+
+<div class="card">
+
+<h2>Regenverwachting per uur</h2>
+
+<p>
+Bij wisselvallig weer kunnen regenbuien zich snel ontwikkelen.
+Daarom is het verstandig om de verwachting meerdere keren per dag te bekijken.
+</p>
+
+<a href="#" class="btn">
+Bekijk Meer
+</a>
+
+</div>
+
+<div class="card">
+
+<h2>Meer Weerinformatie</h2>
+
+<ul>
+<li><a href="index.html">Weer Vandaag</a></li>
+<li><a href="buienradar.html">Buienradar Vandaag</a></li>
+<li><a href="#">Wind Vandaag</a></li>
+<li><a href="#">Temperatuur Vandaag</a></li>
+</ul>
+
+</div>
+
+</div>
+
+<footer>
+© 2026 TrendBurst
+</footer>
+
+<script>
+document.getElementById("date").textContent =
+new Date().toLocaleString("nl-NL");
+</script>
+
+</body>
+</html>
