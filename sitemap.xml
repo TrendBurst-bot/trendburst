@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://trendburst-bot.github.io/trendburst/</loc>
+    <changefreq>hourly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://trendburst-bot.github.io/trendburst/buienradar</loc>
+    <changefreq>hourly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://trendburst-bot.github.io/trendburst/regen</loc>
+    <changefreq>hourly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://trendburst-bot.github.io/trendburst/zomer</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://trendburst-bot.github.io/trendburst/aardbeving-indonesie</loc>
+    <changefreq>hourly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://trendburst-bot.github.io/trendburst/aardbeving-spanje</loc>
+    <changefreq>hourly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://trendburst-bot.github.io/trendburst/landgraaf</loc>
+    <changefreq>hourly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://trendburst-bot.github.io/trendburst/zwolle</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+</urlset>
