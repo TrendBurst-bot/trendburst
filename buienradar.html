@@ -108,11 +108,25 @@
       background: #0d4f80;
     }
 
+    .context-link {
+      color: #1769aa;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .context-link:hover {
+      text-decoration: underline;
+    }
+
     .links a {
       display: block;
       color: #1769aa;
       text-decoration: none;
       padding: 9px 0;
+    }
+
+    .links a:hover {
+      text-decoration: underline;
     }
 
     footer {
@@ -143,6 +157,7 @@
 
 <main class="container">
 
+  <!-- INTRO -->
   <section class="card">
 
     <p>
@@ -158,6 +173,15 @@
       Controleer daarom de actuele ontwikkelingen voordat je naar buiten gaat.
     </p>
 
+    <p>
+      Wil je naast de buienradar ook het algemene weer bekijken?
+      Bekijk dan het
+      <a class="context-link" href="index.html">
+        weer vandaag
+      </a>
+      voor een breder overzicht.
+    </p>
+
     <div class="notice">
       🌧️ <strong>Let op:</strong>
       Regenbuien kunnen zich snel verplaatsen en veranderen.
@@ -168,26 +192,26 @@
 
       <div class="rain-box">
         <span>🌧️</span>
-        Regen
-        <strong>Actuele verwachting</strong>
+        <strong>Regen</strong>
+        <p>Actuele verwachting</p>
       </div>
 
       <div class="rain-box">
         <span>⏰</span>
-        Per uur
-        <strong>Komende uren</strong>
+        <strong>Per uur</strong>
+        <p>Komende uren</p>
       </div>
 
       <div class="rain-box">
         <span>💨</span>
-        Wind
-        <strong>Actuele verwachting</strong>
+        <strong>Wind</strong>
+        <p>Actuele verwachting</p>
       </div>
 
       <div class="rain-box">
         <span>🌡️</span>
-        Temperatuur
-        <strong>Vandaag</strong>
+        <strong>Temperatuur</strong>
+        <p>Vandaag</p>
       </div>
 
     </div>
@@ -199,6 +223,7 @@
     Advertentie
   </div>
 
+  <!-- REGEN -->
   <section class="card">
 
     <h2>Regenverwachting vandaag</h2>
@@ -214,12 +239,21 @@
       veranderingen in neerslag, wind en temperatuur.
     </p>
 
+    <p>
+      Voor meer informatie over neerslag kun je ook onze pagina
+      <a class="context-link" href="regen.html">
+        Regen vandaag
+      </a>
+      bekijken.
+    </p>
+
     <a class="cta" href="#meer">
       Bekijk meer weerinformatie
     </a>
 
   </section>
 
+  <!-- MEER WEER -->
   <section class="card" id="meer">
 
     <h2>Meer informatie over regen en weer</h2>
@@ -230,26 +264,78 @@
       kan een verandering in het weer snel merkbaar zijn.
     </p>
 
+    <p>
+      Tijdens warme periodes kan het weer snel omslaan. Bekijk daarom
+      ook onze pagina over
+      <a class="context-link" href="zomer.html">
+        zomerweer
+      </a>
+      voor actuele zomertrends.
+    </p>
+
   </section>
 
+  <!-- ACTUELE ONDERWERPEN -->
+  <section class="card">
+
+    <h2>Andere actuele onderwerpen</h2>
+
+    <p>
+      TrendBurst volgt naast het weer ook andere onderwerpen die
+      momenteel veel aandacht krijgen.
+    </p>
+
+    <p>
+      Bekijk bijvoorbeeld
+      <a class="context-link" href="aardbeving-indonesie.html">
+        Aardbeving Indonesië
+      </a>,
+      <a class="context-link" href="aardbeving-spanje.html">
+        Aardbeving Spanje
+      </a>
+      of het laatste
+      <a class="context-link" href="landgraaf.html">
+        nieuws uit Landgraaf
+      </a>.
+    </p>
+
+  </section>
+
+  <!-- ALL INTERNAL LINKS -->
   <section class="card links">
 
-    <h2>Meer weer</h2>
+    <h2>🔥 Meer actuele trends</h2>
 
     <a href="index.html">
       🌤️ Weer vandaag
     </a>
 
+    <a href="buienradar.html">
+      🌧️ Buienradar vandaag
+    </a>
+
     <a href="regen.html">
-      🌧️ Regen vandaag
+      ☔ Regen vandaag
     </a>
 
-    <a href="#">
-      🌡️ Temperatuur vandaag
+    <a href="zomer.html">
+      ☀️ Zomerweer
     </a>
 
-    <a href="#">
-      💨 Wind vandaag
+    <a href="aardbeving-indonesie.html">
+      🌍 Aardbeving Indonesië
+    </a>
+
+    <a href="aardbeving-spanje.html">
+      🌍 Aardbeving Spanje
+    </a>
+
+    <a href="landgraaf.html">
+      📰 Landgraaf vandaag
+    </a>
+
+    <a href="zwolle.html">
+      🎡 Zwolle vandaag
     </a>
 
   </section>
