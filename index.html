@@ -50,6 +50,7 @@
     }
 
     .container {
+      width: 100%;
       max-width: 850px;
       margin: 20px auto;
       padding: 0 15px;
@@ -118,25 +119,9 @@
     }
 
     .ad-inner iframe {
+      display: block;
       max-width: 100% !important;
-    }
-
-    /* يجعل البنر مناسبًا للجوال */
-    @media (max-width: 600px) {
-
-      .ad {
-        min-height: 90px;
-        margin: 18px 0;
-        border-left: 0;
-        border-right: 0;
-      }
-
-      .ad-inner {
-        width: 100%;
-        max-width: 100%;
-        min-height: 90px;
-      }
-
+      border: 0;
     }
 
     .notice {
@@ -190,6 +175,10 @@
       font-size: 13px;
     }
 
+    /* =========================
+       MOBILE
+       ========================= */
+
     @media (max-width: 600px) {
 
       header h1 {
@@ -206,6 +195,39 @@
 
       .cta {
         max-width: 100%;
+      }
+
+      .ad {
+        min-height: 90px;
+        margin: 18px 0;
+        border-left: 0;
+        border-right: 0;
+      }
+
+      .ad-inner {
+        width: 100%;
+        max-width: 100%;
+        min-height: 90px;
+      }
+
+      .ad-inner iframe {
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+    }
+
+    @media (max-width: 380px) {
+
+      .container {
+        padding: 0 10px;
+      }
+
+      .card {
+        padding: 16px;
+      }
+
+      .weather-item {
+        padding: 12px 8px;
       }
 
     }
@@ -231,7 +253,7 @@
   <section class="card">
 
     <div class="update">
-      Laatst bijgewerkt:
+      <strong>Laatst bijgewerkt:</strong>
       <span id="date"></span>
     </div>
 
@@ -260,51 +282,27 @@
     <div class="weather-grid">
 
       <div class="weather-item">
-
         🌡️
-
         Temperatuur
-
-        <strong>
-          Actuele verwachting
-        </strong>
-
+        <strong>Actuele verwachting</strong>
       </div>
 
       <div class="weather-item">
-
         🌧️
-
         Regen
-
-        <strong>
-          Regenverwachting
-        </strong>
-
+        <strong>Regenverwachting</strong>
       </div>
 
       <div class="weather-item">
-
         💨
-
         Wind
-
-        <strong>
-          Windverwachting
-        </strong>
-
+        <strong>Windverwachting</strong>
       </div>
 
       <div class="weather-item">
-
         ☀️
-
         Weersverwachting
-
-        <strong>
-          Vandaag
-        </strong>
-
+        <strong>Vandaag</strong>
       </div>
 
     </div>
@@ -352,7 +350,8 @@
       om de verwachting voor de komende uren regelmatig te controleren.
     </p>
 
-    <a class="cta" href="buienradar">
+    <a class="cta"
+       href="https://trendburst-bot.github.io/trendburst/buienradar">
       🌧️ Bekijk Buienradar vandaag
     </a>
 
@@ -373,13 +372,15 @@
 
     <p>
       Bekijk daarom onze pagina over
-      <a class="context-link" href="regen">
+      <a class="context-link"
+         href="https://trendburst-bot.github.io/trendburst/regen">
         regen vandaag
       </a>
       voor meer informatie over de regenverwachting.
     </p>
 
-    <a class="cta" href="regen">
+    <a class="cta"
+       href="https://trendburst-bot.github.io/trendburst/regen">
       ☔ Regen vandaag bekijken
     </a>
 
@@ -400,7 +401,8 @@
 
     <p>
       Voor regen in de komende uren kun je ook
-      <a class="context-link" href="buienradar">
+      <a class="context-link"
+         href="https://trendburst-bot.github.io/trendburst/buienradar">
         Buienradar vandaag
       </a>
       bekijken.
@@ -422,7 +424,8 @@
 
     <p>
       Bekijk onze pagina over
-      <a class="context-link" href="zomer">
+      <a class="context-link"
+         href="https://trendburst-bot.github.io/trendburst/zomer">
         zomerweer
       </a>
       voor meer informatie.
@@ -445,13 +448,15 @@
     <p>
 
       Bekijk bijvoorbeeld
-      <a class="context-link" href="aardbeving-indonesie">
+      <a class="context-link"
+         href="https://trendburst-bot.github.io/trendburst/aardbeving-indonesie">
         Aardbeving Indonesië
       </a>
 
       of
 
-      <a class="context-link" href="aardbeving-spanje">
+      <a class="context-link"
+         href="https://trendburst-bot.github.io/trendburst/aardbeving-spanje">
         Aardbeving Spanje
       </a>.
 
@@ -466,35 +471,35 @@
 
     <h2>🔥 Meer actuele trends</h2>
 
-    <a href="/">
+    <a href="https://trendburst-bot.github.io/trendburst/">
       🌤️ Weer vandaag
     </a>
 
-    <a href="buienradar">
+    <a href="https://trendburst-bot.github.io/trendburst/buienradar">
       🌧️ Buienradar vandaag
     </a>
 
-    <a href="regen">
+    <a href="https://trendburst-bot.github.io/trendburst/regen">
       ☔ Regen vandaag
     </a>
 
-    <a href="zomer">
+    <a href="https://trendburst-bot.github.io/trendburst/zomer">
       ☀️ Zomerweer
     </a>
 
-    <a href="aardbeving-indonesie">
+    <a href="https://trendburst-bot.github.io/trendburst/aardbeving-indonesie">
       🌍 Aardbeving Indonesië
     </a>
 
-    <a href="aardbeving-spanje">
+    <a href="https://trendburst-bot.github.io/trendburst/aardbeving-spanje">
       🇪🇸 Aardbeving Spanje
     </a>
 
-    <a href="landgraaf">
+    <a href="https://trendburst-bot.github.io/trendburst/landgraaf">
       📰 Landgraaf vandaag
     </a>
 
-    <a href="zwolle">
+    <a href="https://trendburst-bot.github.io/trendburst/zwolle">
       📍 Zwolle vandaag
     </a>
 
