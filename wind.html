@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Wind Vandaag: Windsnelheid, Windrichting en Verwachting</title>
+
+<meta name="description"
+content="Wind vandaag in Nederland: bekijk de actuele windverwachting, windsnelheid, windrichting en windkracht voor vandaag en de komende uren.">
+
+<meta name="robots" content="index, follow, max-image-preview:large">
+
+<link rel="canonical"
+href="https://trendburst-bot.github.io/trendburst/wind.html">
+
+<style>
+
+*{
+box-sizing:border-box;
+}
+
+html,
+body{
+margin:0;
+padding:0;
+width:100%;
+overflow-x:hidden;
+}
+
+body{
+font-family:Arial,Helvetica,sans-serif;
+background:#f5f7fa;
+color:#222;
+line-height:1.65;
+}
+
+header{
+background:#0288d1;
+color:#fff;
+padding:30px 15px;
+text-align:center;
+}
+
+header h1{
+margin:0;
+font-size:30px;
+line-height:1.3;
+}
+
+header p{
+margin:9px 0 0;
+font-size:16px;
+}
+
+.container{
+width:100%;
+max-width:850px;
+margin:20px auto;
+padding:0 15px;
+}
+
+.card{
+background:#fff;
+padding:22px;
+margin-bottom:18px;
+border-radius:12px;
+box-shadow:0 2px 9px rgba(0,0,0,.07);
+}
+
+.card h2{
+margin-top:0;
+color:#0288d1;
+line-height:1.4;
+}
+
+.update{
+font-size:13px;
+color:#777;
+margin-bottom:15px;
+}
+
+.notice{
+background:#eef8ff;
+border-left:4px solid #0288d1;
+padding:15px;
+margin:18px 0;
+border-radius:6px;
+}
+
+.wind-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:12px;
+margin-top:18px;
+}
+
+.wind-box{
+background:#eef8ff;
+padding:17px;
+border-radius:9px;
+text-align:center;
+}
+
+.wind-box span{
+display:block;
+font-size:29px;
+margin-bottom:5px;
+}
+
+.wind-box strong{
+display:block;
+}
+
+.wind-box p{
+margin:6px 0 0;
+font-size:14px;
+color:#666;
+}
+
+
+/* =========================
+   RESPONSIVE BANNER
+========================= */
+
+.ad{
+width:100%;
+height:90px;
+min-height:90px;
+display:flex;
+align-items:center;
+justify-content:center;
+background:#fafafa;
+border:1px dashed #ccc;
+margin:20px 0;
+padding:0;
+overflow:hidden;
+position:relative;
+}
+
+.ad iframe{
+display:block;
+width:728px !important;
+max-width:100% !important;
+height:90px !important;
+border:0 !important;
+}
+
+.ad > div,
+.ad > iframe,
+.ad > ins{
+max-width:100% !important;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.btn{
+display:inline-block;
+background:#0288d1;
+color:#fff;
+padding:12px 20px;
+border-radius:7px;
+text-decoration:none;
+font-weight:bold;
+margin-top:10px;
+margin-right:5px;
+}
+
+.btn:hover{
+background:#0277bd;
+}
+
+
+/* =========================
+   LINKS
+========================= */
+
+.links a{
+display:block;
+padding:10px 0;
+color:#1769aa;
+text-decoration:none;
+border-bottom:1px solid #eee;
+font-weight:500;
+}
+
+.links a:last-child{
+border-bottom:none;
+}
+
+.links a:hover{
+text-decoration:underline;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+text-align:center;
+padding:25px 15px;
+color:#777;
+font-size:13px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:600px){
+
+header{
+padding:24px 12px;
+}
+
+header h1{
+font-size:23px;
+}
+
+header p{
+font-size:14px;
+}
+
+.container{
+padding:0 12px;
+margin-top:15px;
+}
+
+.card{
+padding:18px;
+border-radius:10px;
+}
+
+.wind-grid{
+grid-template-columns:1fr 1fr;
+gap:10px;
+}
+
+.wind-box{
+padding:14px 8px;
+}
+
+.wind-box span{
+font-size:25px;
+}
+
+.wind-box strong{
+font-size:14px;
+}
+
+.wind-box p{
+font-size:12px;
+}
+
+
+/* إعلان الهاتف */
+
+.ad{
+width:100%;
+height:90px;
+min-height:90px;
+margin:18px 0;
+}
+
+.ad iframe{
+width:100% !important;
+max-width:100% !important;
+height:90px !important;
+}
+
+.btn{
+max-width:100%;
+}
+
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media(max-width:380px){
+
+.container{
+padding:0 10px;
+}
+
+.card{
+padding:16px;
+}
+
+.wind-box{
+padding:12px 7px;
+}
+
+.wind-box span{
+font-size:23px;
+}
+
+.ad{
+margin:15px 0;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<header>
+
+<h1>Wind Vandaag</h1>
+
+<p>
+Actuele windverwachting, windsnelheid en windrichting
+</p>
+
+</header>
+
+
+<main class="container">
+
+
+<!-- =========================
+     INTRO
+========================= -->
+
+<section class="card">
+
+<div class="update">
+
+<strong>Laatst bijgewerkt:</strong>
+<span id="date"></span>
+
+</div>
+
+
+<h2>Hoe hard waait het vandaag?</h2>
+
+<p>
+De wind kan gedurende de dag veranderen.
+Windsnelheid en windrichting kunnen per regio verschillen.
+Vooral aan de kust en in open gebieden kan de wind sterker
+aanvoelen dan in stedelijke gebieden.
+</p>
+
+
+<div class="notice">
+
+💨 <strong>Let op:</strong>
+De actuele windverwachting kan gedurende de dag veranderen.
+Controleer daarom regelmatig de nieuwste beschikbare
+weersinformatie.
+
+</div>
+
+
+<div class="wind-grid">
+
+
+<div class="wind-box">
+
+<span>💨</span>
+
+<strong>Windsnelheid</strong>
+
+<p>Verwachting vandaag</p>
+
+</div>
+
+
+<div class="wind-box">
+
+<span>🧭</span>
+
+<strong>Windrichting</strong>
+
+<p>Actuele verwachting</p>
+
+</div>
+
+
+<div class="wind-box">
+
+<span>🌬️</span>
+
+<strong>Windkracht</strong>
+
+<p>Vandaag</p>
+
+</div>
+
+
+<div class="wind-box">
+
+<span>⏰</span>
+
+<strong>Komende uren</strong>
+
+<p>Windverwachting</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     BANNER
+========================= -->
+
+<div class="ad">
+
+<script>
+atOptions = {
+'key' : '77a41a8b52696cf0b6dd4d507cc270d0',
+'format' : 'iframe',
+'height' : 90,
+'width' : 728,
+'params' : {}
+};
+</script>
+
+<script src="https://www.highperformanceformat.com/77a41a8b52696cf0b6dd4d507cc270d0/invoke.js"></script>
+
+</div>
+
+
+<!-- =========================
+     WINDVERWACHTING
+========================= -->
+
+<section class="card">
+
+<h2>Windverwachting voor vandaag</h2>
+
+<p>
+De wind kan in de loop van de dag sterker of zwakker worden.
+Ook windstoten kunnen tijdelijk voor hogere windsnelheden
+zorgen.
+</p>
+
+<p>
+Wie vandaag gaat fietsen, wandelen of een andere
+buitenactiviteit plant, kan daarom het beste vooraf de
+windverwachting voor de eigen regio controleren.
+</p>
+
+
+<a
+href="https://trendburst-bot.github.io/trendburst/"
+class="btn">
+
+🌤️ Bekijk weer vandaag
+
+</a>
+
+</section>
+
+
+<!-- =========================
+     WIND EN REGEN
+========================= -->
+
+<section class="card">
+
+<h2>Wind en regen</h2>
+
+<p>
+Wind en regen kunnen samen invloed hebben op hoe het weer
+buiten aanvoelt. Bij stevige wind kunnen regenbuien sneller
+over een gebied trekken, terwijl windstoten tijdelijk sterker
+kunnen zijn.
+</p>
+
+<p>
+Controleer daarom naast de windverwachting ook de
+neerslagverwachting wanneer je buitenactiviteiten plant.
+</p>
+
+
+<a
+href="https://trendburst-bot.github.io/trendburst/regen.html"
+class="btn">
+
+☔ Bekijk regen vandaag
+
+</a>
+
+
+<a
+href="https://trendburst-bot.github.io/trendburst/buienradar.html"
+class="btn">
+
+🌧️ Bekijk Buienradar
+
+</a>
+
+</section>
+
+
+<!-- =========================
+     WIND EN ZOMER
+========================= -->
+
+<section class="card">
+
+<h2>Wind tijdens warme zomerdagen</h2>
+
+<p>
+Tijdens warme zomerdagen kan wind invloed hebben op hoe warm
+of aangenaam het buiten aanvoelt. Een stevige wind kan voor
+verkoeling zorgen, terwijl weinig wind juist voor een warmer
+gevoel kan zorgen.
+</p>
+
+<p>
+Bekijk daarom naast de temperatuur ook de actuele
+windverwachting voordat je naar buiten gaat.
+</p>
+
+
+<a
+href="https://trendburst-bot.github.io/trendburst/zomer.html"
+class="btn">
+
+☀️ Bekijk zomerweer
+
+</a>
+
+</section>
+
+
+<!-- =========================
+     SMART LINK
+========================= -->
+
+<section class="card">
+
+<h2>Bekijk actuele informatie</h2>
+
+<p>
+Wil je meer actuele informatie bekijken?
+Gebruik de onderstaande knop.
+</p>
+
+
+<a
+href="https://www.effectivecpmnetwork.com/es0h17h3?key=b094b0516b68a26bb61ae965405016f9"
+class="btn"
+target="_blank"
+rel="nofollow sponsored noopener">
+
+Bekijk actuele informatie
+
+</a>
+
+</section>
+
+
+<!-- =========================
+     INTERNAL LINKS
+========================= -->
+
+<section class="card links">
+
+<h2>Meer op TrendBurst</h2>
+
+
+<a href="https://trendburst-bot.github.io/trendburst/">
+🌤️ Weer Vandaag
+</a>
+
+
+<a href="https://trendburst-bot.github.io/trendburst/buienradar">
+🌧️ Buienradar Vandaag
+</a>
+
+
+<a href="https://trendburst-bot.github.io/trendburst/regen">
+☔ Regen Vandaag
+</a>
+
+
+<a href="https://trendburst-bot.github.io/trendburst/zomer">
+☀️ Zomer Vandaag
+</a>
+
+
+<a href="https://trendburst-bot.github.io/trendburst/wind">
+💨 Wind Vandaag
+</a>
+
+
+<a href="https://trendburst-bot.github.io/trendburst/zwolle">
+📍 Zwolle Vandaag
+</a>
+
+
+<a href="https://trendburst-bot.github.io/trendburst/landgraaf">
+📰 Landgraaf Vandaag
+</a>
+
+
+<a href="https://trendburst-bot.github.io/trendburst/aardbeving-indonesie">
+🌍 Aardbeving Indonesië
+</a>
+
+
+<a href="https://trendburst-bot.github.io/trendburst/aardbeving-spanje">
+🇪🇸 Aardbeving Spanje
+</a>
+
+
+</section>
+
+
+</main>
+
+
+<footer>
+
+© 2026 TrendBurst · Actuele trends en weersinformatie
+
+</footer>
+
+
+<script>
+
+const now = new Date();
+
+document.getElementById("date").textContent =
+now.toLocaleString("nl-NL",{
+dateStyle:"long",
+timeStyle:"short"
+});
+
+</script>
+
+
+</body>
+</html>
