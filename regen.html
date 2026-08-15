@@ -12,17 +12,25 @@ content="Regen vandaag in Nederland: waar en wanneer gaat het regenen? Bekijk de
 <meta name="robots" content="index, follow, max-image-preview:large">
 
 <link rel="canonical"
-href="https://trendburst-bot.github.io/trendburst/regen.html">
+href="https://trendburst-bot.github.io/trendburst/regen">
 
 <style>
+
 *{
 box-sizing:border-box;
+}
+
+html,
+body{
+margin:0;
+padding:0;
+width:100%;
+overflow-x:hidden;
 }
 
 body{
 font-family:Arial,Helvetica,sans-serif;
 background:#f5f7fa;
-margin:0;
 color:#333;
 line-height:1.65;
 }
@@ -44,6 +52,7 @@ margin:8px 0 0;
 }
 
 .container{
+width:100%;
 max-width:850px;
 margin:20px auto;
 padding:0 15px;
@@ -90,18 +99,46 @@ font-size:28px;
 margin-bottom:5px;
 }
 
+/* =========================
+   RESPONSIVE BANNER
+========================= */
+
 .ad-box{
+width:100%;
+max-width:100%;
 min-height:90px;
+height:auto;
 display:flex;
 align-items:center;
 justify-content:center;
-border:1px dashed #ccc;
 background:#fafafa;
+border:1px dashed #ccc;
 margin:20px 0;
 color:#777;
 font-size:13px;
 overflow:hidden;
+position:relative;
 }
+
+/* الإعلان الأصلي 728x90 */
+.ad-box iframe{
+display:block;
+width:728px !important;
+max-width:100% !important;
+height:90px !important;
+border:0 !important;
+}
+
+/* أي عنصر يتم إنشاؤه بواسطة شبكة الإعلان */
+.ad-box > div,
+.ad-box > iframe,
+.ad-box > ins{
+max-width:100% !important;
+}
+
+/* =========================
+   BUTTON
+========================= */
 
 .btn{
 display:inline-block;
@@ -117,6 +154,10 @@ margin-top:10px;
 .btn:hover{
 background:#1565c0;
 }
+
+/* =========================
+   LINKS
+========================= */
 
 .links a{
 display:block;
@@ -134,6 +175,10 @@ border-bottom:none;
 text-decoration:underline;
 }
 
+/* =========================
+   FOOTER
+========================= */
+
 footer{
 text-align:center;
 padding:25px 15px;
@@ -141,21 +186,99 @@ color:#777;
 font-size:13px;
 }
 
+/* =========================
+   MOBILE
+========================= */
+
 @media(max-width:600px){
+
+header{
+padding:24px 12px;
+}
 
 header h1{
 font-size:23px;
 }
 
-.info-grid{
-grid-template-columns:1fr 1fr;
+header p{
+font-size:14px;
+}
+
+.container{
+padding:0 12px;
+margin-top:15px;
 }
 
 .card{
 padding:18px;
+border-radius:10px;
+}
+
+.info-grid{
+grid-template-columns:1fr 1fr;
+gap:10px;
+}
+
+.info{
+padding:14px 8px;
+}
+
+.info span{
+font-size:25px;
+}
+
+/*
+  جعل الإعلان مناسباً لشاشات الهاتف.
+  الإعلان الأصلي 728px يتم تقليصه بصرياً
+  داخل المساحة المتاحة.
+*/
+
+.ad-box{
+width:100%;
+min-height:90px;
+height:90px;
+margin:18px 0;
+}
+
+.ad-box iframe{
+width:100% !important;
+max-width:100% !important;
+height:90px !important;
 }
 
 }
+
+/* شاشات صغيرة جداً */
+
+@media(max-width:360px){
+
+.container{
+padding:0 10px;
+}
+
+.card{
+padding:15px;
+}
+
+.info{
+font-size:13px;
+}
+
+.info strong{
+font-size:14px;
+}
+
+.info p{
+font-size:12px;
+}
+
+.ad-box{
+margin-left:0;
+margin-right:0;
+}
+
+}
+
 </style>
 </head>
 
@@ -171,11 +294,16 @@ padding:18px;
 
 <main class="container">
 
+<!-- INTRO -->
+
 <section class="card">
 
 <div class="update">
+
 <strong>Laatst bijgewerkt:</strong>
+
 <span id="date"></span>
+
 </div>
 
 <h2>Waar gaat het vandaag regenen?</h2>
@@ -197,27 +325,43 @@ Controleer daarom regelmatig de nieuwste beschikbare weerinformatie.
 <div class="info-grid">
 
 <div class="info">
+
 <span>🌧️</span>
+
 <strong>Regen</strong>
+
 <p>Verwachting vandaag</p>
+
 </div>
 
 <div class="info">
+
 <span>⏰</span>
+
 <strong>Per uur</strong>
+
 <p>Komende uren</p>
+
 </div>
 
 <div class="info">
+
 <span>💨</span>
+
 <strong>Wind</strong>
+
 <p>Verwachting vandaag</p>
+
 </div>
 
 <div class="info">
+
 <span>🌡️</span>
+
 <strong>Temperatuur</strong>
+
 <p>Vandaag</p>
+
 </div>
 
 </div>
@@ -225,16 +369,28 @@ Controleer daarom regelmatig de nieuwste beschikbare weerinformatie.
 </section>
 
 
-<!-- BANNER -->
+<!-- =========================
+     BANNER
+========================= -->
 
 <div class="ad-box">
 
-<!-- PLAATS HIER JE BANNER CODE -->
+<script>
+atOptions = {
+'key' : '77a41a8b52696cf0b6dd4d507cc270d0',
+'format' : 'iframe',
+'height' : 90,
+'width' : 728,
+'params' : {}
+};
+</script>
 
-Advertentie
+<script src="https://www.highperformanceformat.com/77a41a8b52696cf0b6dd4d507cc270d0/invoke.js"></script>
 
 </div>
 
+
+<!-- REGENVERWACHTING -->
 
 <section class="card">
 
@@ -259,6 +415,8 @@ Bekijk meer weerinformatie
 </section>
 
 
+<!-- MEER INFORMATIE -->
+
 <section class="card" id="weerinfo">
 
 <h2>Meer informatie over regen en weer</h2>
@@ -278,63 +436,75 @@ over het weer vandaag, buienradar, temperatuur en wind.
 </section>
 
 
-<!-- SMART LINK -->
+<!-- =========================
+     SMART LINK
+========================= -->
 
 <section class="card">
 
 <h2>Bekijk actuele informatie</h2>
 
 <p>
-Wil je meer actuele informatie bekijken? Gebruik de onderstaande knop.
+Wil je meer actuele informatie bekijken?
+Gebruik de onderstaande knop.
 </p>
 
 <a
-href="YOUR-SMART-LINK-HERE"
+href="https://www.effectivecpmnetwork.com/es0h17h3?key=b094b0516b68a26bb61ae965405016f9"
 class="btn"
 target="_blank"
 rel="nofollow sponsored noopener">
+
 Bekijk actuele informatie
+
 </a>
 
 </section>
 
 
-<!-- INTERNAL LINKS -->
+<!-- =========================
+     INTERNAL LINKS
+     ZONDER .HTML
+========================= -->
 
 <section class="card links">
 
 <h2>Meer op TrendBurst</h2>
 
-<a href="index.html">
+<a href="/">
 🌤️ Weer Vandaag
 </a>
 
-<a href="buienradar.html">
+<a href="/buienradar">
 🌧️ Buienradar Vandaag
 </a>
 
-<a href="regen.html">
+<a href="/regen">
 ☔ Regen Vandaag
 </a>
 
-<a href="zomer.html">
+<a href="/zomer">
 ☀️ Zomerweer
 </a>
 
-<a href="landgraaf.html">
+<a href="/landgraaf">
 📰 Landgraaf Vandaag
 </a>
 
-<a href="aardbeving-indonesie.html">
+<a href="/aardbeving-indonesie">
 🌍 Aardbeving Indonesië
 </a>
 
-<a href="aardbeving-spanje.html">
+<a href="/aardbeving-spanje">
 🌍 Aardbeving Spanje
 </a>
 
-<a href="wind.html">
+<a href="/wind">
 💨 Wind Vandaag
+</a>
+
+<a href="/zwolle">
+🎡 Zwolle Vandaag
 </a>
 
 </section>
