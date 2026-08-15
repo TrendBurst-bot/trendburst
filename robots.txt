@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://trendburst-bot.github.io/trendburst/sitemap.xml
